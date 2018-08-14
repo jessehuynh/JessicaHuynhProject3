@@ -168,17 +168,46 @@ $(function(){
 
    const lengthChoice = $('input[name=length]:checked').val();
    console.log(lengthChoice);
-
    // I want to filter out the options based on their choices
    const shapeInfo = structure[shapeChoice];
-   const 
    console.log(shapeInfo);
-   for(let i = 0; i < shapeInfo.length; i++){
-      if(shapeInfo[i].thickness === 'fine') {
-         console.log('hi world');
+   // I want to find out if their forehead size equals to true or false
+   
+   // const fringeInfo = structure[fringeChoice];
+   // structure.round[0].fringe
+   const getFringeChoice = () => {
+      if(fringeChoice === 'three'){
+         return false;
+      } else if(fringeChoice === 'five') {
+         return true;
+      } else {
+         const randNum = Math.random(); // give num between 0 and 1
+         if (randNum < 0.5) {
+            return true;
+         } else {
+            return false;
+         }
       }
+   };
 
-   }
+   console.log(getFringeChoice());
+
+   
+
+
+   // for (let i = 0; i < fringeInfo.length; i++) {
+   //    if(fringeInfo[i] === true) {
+   //       console.log('chicken wings');
+   //    } else {
+   //       console.log('pizza');
+   //    }
+   // }
+
+   // for(let i = 0; i < shapeInfo.length; i++){
+   //    if(shapeInfo[i].thickness === 'fine' && fringeInfo === 'true') {
+   //       console.log('hi world');
+   //    }
+   // }
    // if the user's choice for hair density is thin, or style is low maintenance, fringe is not an option.
    // if the user chooses the 'short' length, filter for short options, if med-long, filter med-long option. If 'pick for me', randomize
    // if the user's forehead is small, no fringe. If the forehead is normal, fringe is random. If the user's forehead is big, yes fringe.
