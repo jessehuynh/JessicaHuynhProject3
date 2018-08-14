@@ -1,0 +1,115 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+     <link rel="stylesheet" href="styles/style.css">
+     <title>FREE HAIR CONSULTATION</title>
+ </head>
+ <body>
+     <!-- HEADER STARTS -->
+     <header>
+         <h1>1-Minute Hair Consultation</h1>
+     </header>
+     <!-- HEADER ENDS -->
+     <!-- MAIN STARTS -->
+     <main>
+         <section class="consultation">
+             <form action="">
+                 <fieldset class="structure">
+                     <h3>Facial Structure</h3>
+                     <p>What's your face shape?</p>
+                     <input type="radio" class="structure" id="round" name="structure" value="round">
+                     <label for="round">round</label>
+                     <input type="radio" class="structure" id="oval" name="structure" value="oval">
+                     <label for="oval">oval</label>
+                     <input type="radio" class="structure" id="heart" name="structure" value="heart">
+                     <label for="heart">heart</label>
+                     <input type="radio" class="structure" id="square" name="structure" value="square">
+                     <label for="square">square</label>
+                     <input type="radio" class="structure" id="oblong" name="structure" value="oblong">
+                     <label for="oblong">oblong</label>
+                     <input type="radio" class="structure" id="triangle" name="structure" value="triangle">
+                     <label for="triangle">triangle</label>
+                     <!-- <input type="radio" class="structure" id="inverted-triangle" name="structure" value="inverted-triangle">
+                     <label for="inverted-triangle">inverted triangle</label> -->
+                     <!-- <input type="checkbox">
+                     <p class="show-chart">Need help?</p>
+                     <article class="chart">
+                         <ul>
+                            <li class="exit-responsive"><i class="fas fa-times"></i></li>
+                            <li>Round: </li>
+                            <li>Oval: </li>
+                            <li>Heart:</li>
+                            <li>Square:</li>
+                            <li>Oblong:</li>
+                            <li>Triangle:</li>
+                            <li>Inverted Triangle:</li>
+                         </ul>
+                     </article> -->
+                 </fieldset>
+                 <fieldset class="thickness">
+                     <h3>Hair Density</h3>
+                     <p>Your hair is:</p>
+                     <input type="radio" class="thickness" id="fine" name="thickness" value="fine">
+                     <label for="fine">fine/thin</label>
+                     <input type="radio" class="thickness" id="medium" name="thickness" value="medium">
+                     <label for="medium">medium</label>
+                     <input type="radio" class="thickness" id="coarse" name="thickness" value="coarse">
+                     <label for="coarse">coarse/thick</label>
+                 </fieldset>
+                 <!-- <fieldset class="texture">
+                     <h3>Hair Texture</h3>
+                     <p>In its natural state, your hair is:</p>
+                     <input type="radio" class="texture" id="str-wav" name="texture" value="str-wav">
+                     <label for="str-wav">straight/wavy</label>
+                     <input type="radio" class="texture" id="curly" name="texture" value="curly">
+                     <label for="curly">curly</label>
+                     <input type="radio" class="texture" id="x-curly" name="texture" value="x-curly">
+                     <label for="x-curly">extra tight & curly</label>
+                 </fieldset> -->
+                 <fieldset class="forehead">
+                     <h3>Fringe/Bangs</h3>
+                     <p>How big is your forehead? Measure with your fingers</p>
+                     <input type="radio" class="forehead" id="three" name="forehead" value="three">
+                     <label for="three">'three' head</label>
+                     <input type="radio" class="forehead" id="four" name="forehead" value="four">
+                     <label for="four">'four' head</label>
+                     <input type="radio" class="forehead" id="five" name="forehead" value="five">
+                     <label for="">'five' head</label>
+                 </fieldset>
+                 <fieldset class="maintenance">
+                     <h3>Level of Hair Maintenance</h3>
+                     <p>Will you style with tools and products, or are you low maintenance?</p>
+                     <input type="radio" class="maintenance" id="style" name="maintenance" value="style">
+                     <label for="style">style with tools/products</label>
+                     <input type="radio" class="maintenance" id="low-main" name="maintenance" value="low-main">
+                     <label for="low-main">low maintenance</label>
+                 </fieldset>
+                 <fieldset class="length">
+                     <h3>Length</h3>
+                     <p>State your length preference:</p>
+                     <input type="radio" class="comfort" id="short" name="length" value="short">
+                     <label for="short">short</label>
+                     <input type="radio" class="comfort" id="med-long" name="length" value="med-long">
+                     <label for="med-long">medium-long</label>
+                     <input type="radio" class="comfort" id="random" name="length" value="random">
+                     <label for="random">pick for me!</label>
+                 </fieldset>
+                 <input type="submit" value="Generate my style!">
+             </form>
+         </section>
+         <section class="results"></section>
+     </main>
+     <!-- MAIN ENDS -->
+     <!-- FOOTER STARTS -->
+     <footer>
+
+     </footer>
+     <!-- FOOTER ENDS -->
+     <script src='https://code.jquery.com/jquery-3.2.1.min.js' integrity='sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4='crossorigin='anonymous'></script>
+     <script src="scripts/script.js"></script>
+ </body>
+ </html>
