@@ -1,4 +1,4 @@
-const structure = {
+const hairstyle = {
    round: [
       {  
          name:'Long & Blunt - Low Maintenance',
@@ -146,6 +146,36 @@ const structure = {
    ]
 }
 
+const hairApp = {}
+
+hairApp.structure = {
+   round:2,
+   oval:5,
+   heart:2,
+   square:1,
+   oblong:3,
+   triangle:4
+},
+
+hairApp.thickness = {
+   fine:1,
+   medium:2,
+   coarse:3
+}
+
+hairApp.forehead = {
+   three: 3,
+   five: 5,
+}
+
+hairApp.maintenance = {
+   style: 3,
+   low: 1,
+}
+
+hairApp.length = {
+
+}
 
 // find out what the user chose
 $(function(){
@@ -153,12 +183,15 @@ $(function(){
    $('form').on('submit',function(e){
       e.preventDefault();
    });
-   // I want to find out what the user chooses
+   // I want to find out what the user chooses and save it in a variable
    const shapeChoice = $('input[name=structure]:checked').val();
    console.log(shapeChoice);
 
    const thicknessChoice = $('input[name=thickness]:checked').val();
    console.log(thicknessChoice);
+   
+   const textureChoice = $('input[name=texture]:checked').val();
+   console.log(textureChoice);
 
    const fringeChoice = $('input[name=forehead]:checked').val();
    console.log(fringeChoice);
@@ -166,31 +199,32 @@ $(function(){
    const maintenanceChoice = $('input[name=maintenance]:checked').val();
    console.log(maintenanceChoice);
 
-   const lengthChoice = $('input[name=length]:checked').val();
-   console.log(lengthChoice);
+
+   const userChoices = Number(shapeChoice) + Number(thicknessChoice) + Number(fringeChoice) + Number(maintenanceChoice) + Number(textureChoice);
+   console.log(userChoices);
    // I want to filter out the options based on their choices
-   const shapeInfo = structure[shapeChoice];
-   console.log(shapeInfo);
+   // const shapeInfo = hairstyle[shapeChoice];
+   // console.log(shapeInfo);
    // I want to find out if their forehead size equals to true or false
    
    // const fringeInfo = structure[fringeChoice];
    // structure.round[0].fringe
-   const getFringeChoice = () => {
-      if(fringeChoice === 'three'){
-         return false;
-      } else if(fringeChoice === 'five') {
-         return true;
-      } else {
-         const randNum = Math.random(); // give num between 0 and 1
-         if (randNum < 0.5) {
-            return true;
-         } else {
-            return false;
-         }
-      }
-   };
+   // const getFringeChoice = () => {
+   //    if(fringeChoice === 3){
+   //       return false;
+   //    } else if(fringeChoice === 5) {
+   //       return true;
+   //    } else {
+   //       const randNum = Math.random(); // give num between 0 and 1
+   //       if (randNum < 0.5) {
+   //          return true;
+   //       } else {
+   //          return false;
+   //       }
+   //    }
+   // };
 
-   console.log(getFringeChoice());
+   // console.log(getFringeChoice());
 
    
 
