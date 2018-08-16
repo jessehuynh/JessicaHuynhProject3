@@ -183,13 +183,14 @@ $(function(){
    $('form').on('submit',function(e){
       e.preventDefault();
    });
-   // I want to find out what the user chooses and save it in a variable
+   // Find out what the user's answers are
+   // The answers have a number value
    const shapeChoice = $('input[name=structure]:checked').val();
    console.log(shapeChoice);
 
    const thicknessChoice = $('input[name=thickness]:checked').val();
    console.log(thicknessChoice);
-   
+
    const textureChoice = $('input[name=texture]:checked').val();
    console.log(textureChoice);
 
@@ -199,14 +200,15 @@ $(function(){
    const maintenanceChoice = $('input[name=maintenance]:checked').val();
    console.log(maintenanceChoice);
 
-
+   // I want to add their total value to the type of hairstyle
    const userChoices = Number(shapeChoice) + Number(thicknessChoice) + Number(fringeChoice) + Number(maintenanceChoice) + Number(textureChoice);
    console.log(userChoices);
-   // I want to filter out the options based on their choices
-   // const shapeInfo = hairstyle[shapeChoice];
-   // console.log(shapeInfo);
-   // I want to find out if their forehead size equals to true or false
-   
+
+   // Take the total and match it to the results
+
+
+
+
    // const fringeInfo = structure[fringeChoice];
    // structure.round[0].fringe
    // const getFringeChoice = () => {
