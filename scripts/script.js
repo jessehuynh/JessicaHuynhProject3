@@ -1,211 +1,161 @@
-const hairstyle = {
-   round: [
-      {  
-         name:'Long & Blunt - Low Maintenance',
-         thickness:'fine',
-         fringe:false,
-         maintenance:'low',
-      },
-      {
-         name:'Long & Blunt - Styled',
-         // thickness:'medium',
-         fringe:true,
-         maintenance:'style'
-      },
-      // {
-      //    name:'Long & Blunt - Styled',
-      //    thickness:'coarse',
-      //    fringe:true,
-      //    maintenance:'style',
-      // }
+hairstyles = {
+   R_Long_and_Layered_With_Fringe: [ 
+      17, 15, 10, 20, 24, 14, 16, 21
    ],
-   oval: [
-      {
-         name:'Long & Layered/Blunt - Low Maintenance',
-         thickness:'fine',
-         fringe:false,
-         maintenance:'low'
-      },
-      {
-         name:'Long & Layered/Blunt - Styled',
-         thickness:'medium',
-         fringe:true,
-         maintenance:'style'
-      },
-      {
-         name: 'Long & Layered/Blunt - Styled',
-         thickness: 'medium',
-         fringe: false,
-         maintenance: 'style'
-      },
-      {
-         name: 'Long & Layered/Blunt - Styled',
-         thickness: 'coarse',
-         fringe: false,
-         maintenance: 'style'
-      },
-      {
-         name: 'Long & Layered/Blunt - Styled',
-         thickness: 'coarse',
-         fringe: true,
-         maintenance: 'style'
-      },
-      {
-         name: 'Long & Layered/Blunt - Low Maintenance',
-         thickness: 'coarse',
-         fringe: false,
-         maintenance: 'low'
-      },
-      {
-         name:'Short & Layered/Blunt - Styled',
-         length:'short',
-         maintenance:'style',
-      }
+   R_Long_and_Blunt_With_Fringe: [
+      17, 15, 10, 20, 24, 14, 16, 21
    ],
-   heart: [
-      {
-         name:'Long & Layered',
-         fringe:true,
-      },
-      {
-         name:'Medium & Layered',
-         fringe:true,
-      },
-      {
-         name:'Short - Styled',
-         length:'short',
-         maintenance:'style',
-      }
+   R_Short_and_Tapered_With_Fringe: [
+      17, 15, 10, 20, 24, 14, 16, 21
    ],
-   square: [
-      {
-         name:'Long & Layered - Styled/Low',
-         fringe:true,
-      },
-      {
-         name: 'Long & Layered - Low',
-         fringe: false,
-      },
-      {
-         name:'Medium & Layered - Styled',
-         fringe:true,
-      },
-      {
-         name: 'Medium & Layered - Styled/Low',
-         fringe: false,
-      },
-      {
-         name:'Short - Styled',
-         length:'short',
-         maintenance:'style',
-      }
+   R_Long_and_Layered_Without_Fringe: [
+      15, 20, 22, 12, 17, 15, 10
    ],
-   oblong: [
-      {
-         name:'Short & Layered/Blunt - Styled',
-         fringe: true,
-         maintenance: 'style',
-      },
-      {
-         name: 'Short & Layered/Blunt - Styled',
-         fringe: false,
-         maintenance: 'styled',
-      },
-      {
-         name:'Medium & Layered/Blunt - Styled',
-         fringe:false,
-         maintenance:'styled',
-      },
-      {
-         name:'Short & Layered/Blunt - Low Maintenance',
-         fringe:false,
-         maintenance:'low'
-      }
+   R_Long_and_Blunt_Without_Fringe: [
+      15, 20, 22, 12, 17, 15, 10
    ],
-   triangle: [
-      {
-         name: 'Short & Layered/Blunt - Styled',
-         fringe: true,
-         maintenance: 'style',
-      },
-      {
-         name: 'Short & Layered/Blunt - Low',
-         fringe: false,
-         maintenance: 'low',
-      },
-      {
-         name:'Medium & Layered/Blunt - Styled',
-         fringe:true,
-         maintenance:'style',
-      },
-      {
-         name: 'Medium & Layered/Blunt - Low',
-         fringe: false,
-         maintenance: 'low',
-      }
+   R_Short_and_Tapered_Without_Fringe: [
+      15, 20, 22, 12, 17, 15, 10
+   ],
+   OV_Long_and_Layered_With_Fringe: [
+      37, 32, 30, 40, 44, 49, 51, 41, 47, 46
+   ],
+   OV_Long_and_Blunt_With_Fringe: [
+      37, 32, 30, 40, 44, 49, 51, 41, 47, 46
+   ],
+   OV_Medium_and_Blunt_With_Fringe: [
+      37, 32, 30, 40, 44, 49, 51, 41, 47, 46
+   ],
+   OV_Medium_and_Layered_With_Fringe: [
+      37, 32, 30, 40, 44, 49, 51, 41, 47, 46
+   ],
+   OV_Long_and_Layered_Without_Fringe: [
+      35, 40, 42, 32, 37, 32, 30
+   ],
+   OV_Medium_and_Blunt_Without_Fringe: [
+      35, 40, 42, 32, 37, 32, 30
+   ],
+   OV_Medium_and_Layered_Without_Fringe: [
+      35, 40, 42, 32, 37, 32, 30
+   ],
+   OV_Short_and_Tapered_Without_Fringe: [
+      35, 40, 42, 32, 37, 32, 30
+   ],
+   H_Medium_and_Blunt_With_Fringe: [
+      55, 60, 62, 52, 50, 67, 64, 69, 71, 61, 59, 54
+   ],
+   H_Medium_and_Blunt_Without_Fringe: [
+      55, 60, 62, 52, 50, 67, 64, 69, 71, 61, 59, 54
+   ],
+   H_Short_and_Layered_Without_Fringe: [
+      55, 60, 62, 52, 50, 67, 64, 69, 71, 61, 59, 54
+   ],
+   H_Short_and_Layered_With_Fringe: [
+      55, 60, 62, 67, 65, 64, 66, 71
+   ],
+   S_Long_and_Layered_With_Fringe: [
+      87, 91, 81, 77, 75, 70, 80, 84, 86, 79, 74
+   ],
+   S_Medium_and_Layered_With_Fringe: [
+      87, 91, 81, 77, 75, 70, 80, 84, 86, 79, 74
+   ],
+   S_Short_and_Tapered_With_Fringe: [
+      87, 91, 81, 77, 75, 70, 80, 84, 86, 79, 74
+   ],
+   S_Long_and_Layered_Without_Fringe: [
+      75, 80, 82, 77, 72, 75, 70
+   ],
+   S_Medium_and_Layered_Without_Fringe: [
+      75, 80, 82, 77, 72, 75, 70
+   ],
+   S_Short_and_Tapered_Without_Fringe: [
+      75, 80, 82, 87, 85, 84, 86, 91
+   ],
+   OB_Medium_and_Layered_With_Fringe: [
+      100, 97, 104, 111, 101, 92, 90, 106
+   ],
+   OB_Medium_and_Blunt_With_Fringe: [
+      100, 97, 104, 111, 101, 92, 90, 106
+   ],
+   OB_Short_and_Tapered_With_Fringe: [
+      100, 97, 104, 111, 101, 92, 90, 106
+   ],
+   OB_Medium_and_Layered_Without_Fringe: [
+      95, 102, 92, 100, 97, 90 
+   ],
+   OB_Medium_and_Blunt_Without_Fringe: [
+      95, 102, 92, 100, 97, 90 
+   ],
+   OB_Short_and_Tapered_Without_Fringe: [
+      95, 102, 92, 100, 97, 90 
+   ],
+   OB_Short_and_Tapered_With_Fringe: [
+      95, 100, 102, 107, 105, 104, 106, 111
+   ],
+   T_Long_and_Layered_With_Fringe: [
+      117, 112, 110, 120, 124, 126, 13
+   ],
+   T_Medium_and_Layered_With_Fringe: [
+      117, 112, 110, 120, 124, 126, 13
+   ],
+   T_Long_and_Layered_Without_Fringe: [
+      115, 120, 122, 112, 117, 110
+   ],
+   T_Medium_and_Layered_Without_Fringe: [
+      115, 120, 122, 112, 117, 110
+   ],
+   T_Short_and_Tapered_With_Fringe: [
+      115, 120, 122, 127, 125, 124, 126, 131
    ]
 }
 
-const hairApp = {}
+let multipleResults = []
 
-hairApp.structure = {
-   round:2,
-   oval:5,
-   heart:2,
-   square:1,
-   oblong:3,
-   triangle:4
-},
 
-hairApp.thickness = {
-   fine:1,
-   medium:2,
-   coarse:3
-}
+// hairApp.userChoices =
+//    Number($('input[name=structure]:checked').val()) + Number($('input[name=thickness]:checked').val()) + Number($('input[name=texture]:checked').val()) + Number($('input[name=forehead]:checked').val()) + Number($('input[name=maintenance]:checked').val());
 
-hairApp.forehead = {
-   three: 3,
-   five: 5,
-}
-
-hairApp.maintenance = {
-   style: 3,
-   low: 1,
-}
-
-hairApp.length = {
-
-}
 
 // find out what the user chose
 $(function(){
    // prevent button from re-directing
    $('form').on('submit',function(e){
+      const shapeChoice = $('input[name=structure]:checked').val();
+      const thicknessChoice = $('input[name=thickness]:checked').val();
+      const textureChoice = $('input[name=texture]:checked').val();  
+      const fringeChoice = $('input[name=forehead]:checked').val();
+      const maintenanceChoice = $('input[name=maintenance]:checked').val();
+      
+      // I want to add their total value to the type of hairstyle
+      const userChoices = Number(shapeChoice) + Number(thicknessChoice) + Number(fringeChoice) + Number(maintenanceChoice) + Number(textureChoice);
+      // console.log(userChoices);
+
       e.preventDefault();
+      for(let result in hairstyles){
+         // console.log(result);
+         // console.log(hairstyles[result]);
+         hairstyles[result].forEach((resItem)=>{
+            // console.log(resItem);
+            if(resItem === userChoices) {
+               // console.log(result);
+               multipleResults.push(result);
+               console.log(multipleResults);
+            }
+         });
+      }
+
+
    });
    // Find out what the user's answers are
    // The answers have a number value
-   const shapeChoice = $('input[name=structure]:checked').val();
-   console.log(shapeChoice);
 
-   const thicknessChoice = $('input[name=thickness]:checked').val();
-   console.log(thicknessChoice);
-
-   const textureChoice = $('input[name=texture]:checked').val();
-   console.log(textureChoice);
-
-   const fringeChoice = $('input[name=forehead]:checked').val();
-   console.log(fringeChoice);
-
-   const maintenanceChoice = $('input[name=maintenance]:checked').val();
-   console.log(maintenanceChoice);
-
-   // I want to add their total value to the type of hairstyle
-   const userChoices = Number(shapeChoice) + Number(thicknessChoice) + Number(fringeChoice) + Number(maintenanceChoice) + Number(textureChoice);
-   console.log(userChoices);
 
    // Take the total and match it to the results
 
+
+   // const newResultName =
+   // console.log(newResultName);
+   
 
 
 
