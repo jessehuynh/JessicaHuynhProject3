@@ -109,36 +109,46 @@ hairstyles = {
    ]
 };
 
+// create array to hold the hairstyles index that match the user's value
 let multipleResults = []
 
-// const shapeChoice = $('input[name=structure]:checked').val();
-// const thicknessChoice = $('input[name=thickness]:checked').val();
-// const textureChoice = $('input[name=texture]:checked').val();
-// const fringeChoice = $('input[name=forehead]:checked').val();
-// const maintenanceChoice = $('input[name=maintenance]:checked').val();
-
+// produce a random result
 const randomResult = (array) => {
    const randomIndex = array[Math.floor(Math.random() * array.length)]
    // console.log(randomIndex);
    return randomIndex;
 }
 
-// find out what the user chose
+// hide the fieldsets except for the first fieldset
+$('.set-2, .set-3, .set-4, .set-5').hide();
+// hide the current fieldset and show the next fieldset on the click of next
 $(function(){
+   let setCounter = 1;
+   $('button').on('click', function(){
+      $(`.set-${setCounter}`).on('click', function(){
+         $(`.set-${setCounter}`).hide()
+         setCounter++;
+         $(`.set-${setCounter}`).show();
+      })
+   });
+   
+   
    $('form').on('submit',function(e){
+      // prevent button from re-directing
+      e.preventDefault();
+      // find out what the user chose
       const shapeChoice = $('input[name=structure]:checked').val();
       const thicknessChoice = $('input[name=thickness]:checked').val();
       const textureChoice = $('input[name=texture]:checked').val();
       const fringeChoice = $('input[name=forehead]:checked').val();
       const maintenanceChoice = $('input[name=maintenance]:checked').val();
-      // prevent button from re-directing
-      e.preventDefault();
-      // Find out what the user's answers are and add the values together
+      // Take the user's answers and add the values together
       let userChoices = Number(shapeChoice) + Number(thicknessChoice) + Number(fringeChoice) + Number(maintenanceChoice) + Number(textureChoice);
+
       console.log(userChoices);
+
       // randomize the results from the matched arrays
 
-      // const hi = Object.keys(hairstyles)
       // loop through the arrays and match the user's final value to a hairstyle
       for(result in hairstyles){
          // console.log(result);
@@ -155,16 +165,29 @@ $(function(){
          });
          
       }
+      // make the name of the array presentable by removing first letter and exchange underscores for spaces
       let resultName = randomResult(multipleResults).split('_').join(' ');
       resultName = resultName.slice(2, resultName.length);
       console.log(resultName);
       
       // console.log(hairstyles);
       // $('.results').append(`<h1>${resultName}</h1>`)
+
+      // put the result onto the page
       $('h2').text(resultName);
+      // reset the array at the end
       multipleResults = []
       // document.getElementById('form').reset();
    });
+   // when you hit refresh, refresh the page
+   $('.refresh').on('click',function(){
+      document.location='';
+   });
+
+   $('label').on('click', function(){
+      $('label').removeClass('selected');
+      $(this).toggleClass('selected')
+   })
 
 });
 

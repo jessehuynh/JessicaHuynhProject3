@@ -1,0 +1,33 @@
+.wrapper {
+   width: 60%;
+   margin:0 2%;
+   text-align:center;
+}
+
+label.selected {
+   border-bottom:1.5px solid #9FB3DF;
+}
+fieldset {
+   display:flex;
+   flex-direction:column;
+   // justify-content:center;
+   align-items:center;
+   margin:2%;
+   ul {
+      display:flex;
+      list-style:none;
+      li {
+         margin:20px;
+      }
+      input[type=radio] {
+         display:none;
+      }
+      label {
+         padding:10px 10px 5px;
+         border-radius:5px;
+         &:hover {
+            border-bottom:1.5px solid #9FB3DF;
+         }
+      }
+   }
+}

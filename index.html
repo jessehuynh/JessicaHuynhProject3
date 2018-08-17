@@ -16,84 +16,140 @@
      <!-- HEADER ENDS -->
      <!-- MAIN STARTS -->
      <main>
-         <section class="consultation">
-             <form action="" id="form">
-                 <fieldset class="structure">
-                     <h3>Facial Structure</h3>
-                     <p>What's your face shape?</p>
-                     <input type="radio" class="structure" id="round" name="structure" value="20">
-                     <label for="round">round</label>
-                     <input type="radio" class="structure" id="oval" name="structure" value="40">
-                     <label for="oval">oval</label>
-                     <input type="radio" class="structure" id="heart" name="structure" value="60">
-                     <label for="heart">heart</label>
-                     <input type="radio" class="structure" id="square" name="structure" value="80">
-                     <label for="square">square</label>
-                     <input type="radio" class="structure" id="oblong" name="structure" value="100">
-                     <label for="oblong">oblong</label>
-                     <input type="radio" class="structure" id="triangle" name="structure" value="120">
-                     <label for="triangle">triangle</label>
-                     <!-- <input type="radio" class="structure" id="inverted-triangle" name="structure" value="inverted-triangle">
-                     <label for="inverted-triangle">inverted triangle</label> -->
-                     <!-- <input type="checkbox">
-                     <p class="show-chart">Need help?</p>
-                     <article class="chart">
+         <div class="wrapper">
+
+             <section class="consultation">
+                 <form action="" id="form">
+                     <fieldset class="structure set-1">
+                         <h3>Facial Structure</h3>
+                         <p>What's your face shape?</p>
                          <ul>
-                            <li class="exit-responsive"><i class="fas fa-times"></i></li>
-                            <li>Round: </li>
-                            <li>Oval: </li>
-                            <li>Heart:</li>
-                            <li>Square:</li>
-                            <li>Oblong:</li>
-                            <li>Triangle:</li>
-                            <li>Inverted Triangle:</li>
+                             <li>
+                                 <input type="radio" class="structure" id="round" name="structure" value="20">
+                                 <label for="round">round</label>
+                             </li>
+                             <li>
+                                 <input type="radio" class="structure" id="oval" name="structure" value="40">
+                                 <label for="oval">oval</label>
+                             </li>
+                             <li>
+                                 <input type="radio" class="structure" id="heart" name="structure" value="60">
+                                 <label for="heart">heart</label>
+                             </li>
+                             <li>
+                                 <input type="radio" class="structure" id="square" name="structure" value="80">
+                                 <label for="square">square</label>
+                             </li>
+                             <li>
+                                 <input type="radio" class="structure" id="oblong" name="structure" value="100">
+                                 <label for="oblong">oblong</label>
+                             </li>
+                             <li>
+                                 <input type="radio" class="structure" id="triangle" name="structure" value="120">
+                                 <label for="triangle">triangle</label>
+                             </li>
                          </ul>
-                     </article> -->
-                 </fieldset>
-                 <fieldset class="thickness">
-                     <h3>Hair Density</h3>
-                     <p>Your hair is:</p>
-                     <input type="radio" class="thickness" id="fine" name="thickness" value="-5">
-                     <label for="fine">fine/thin</label>
-                     <input type="radio" class="thickness" id="medium" name="thickness" value="0">
-                     <label for="medium">medium</label>
-                     <input type="radio" class="thickness" id="coarse" name="thickness" value="0">
-                     <label for="coarse">coarse/thick</label>
-                 </fieldset>
-                 <fieldset class="texture">
-                     <h3>Hair Texture</h3>
-                     <p>What is the coil pattern of your hair in its natural state?</p>
-                     <input type="radio" class="texture" id="str-wav" name="texture" value="0">
-                     <label for="str-wav">straight/wavy</label>
-                     <input type="radio" class="texture" id="curly" name="texture" value="2">
-                     <label for="curly">curly</label>
-                     <input type="radio" class="texture" id="x-curly" name="texture" value="2">
-                     <label for="x-curly">extra tight & curly</label>
-                 </fieldset>
-                 <fieldset class="forehead">
-                     <h3>Fringe/Bangs</h3>
-                     <p>How big is your forehead? Measure with your fingers</p>
-                     <input type="radio" class="forehead" id="three" name="forehead" value="-5">
-                     <label for="three">'three' head</label>
-                     <input type="radio" class="forehead" id="four" name="forehead" value="0">
-                     <label for="four">'four' head</label>
-                     <input type="radio" class="forehead" id="five" name="forehead" value="4">
-                     <label for="five">'five' head</label>
-                 </fieldset>
-                 <fieldset class="maintenance">
-                     <h3>Level of Hair Maintenance</h3>
-                     <p>Will you style with tools and products, or are you low maintenance?</p>
-                     <input type="radio" class="maintenance" id="style" name="maintenance" value="5">
-                     <label for="style">style with tools/products</label>
-                     <input type="radio" class="maintenance" id="low-main" name="maintenance" value="-5">
-                     <label for="low-main">low maintenance</label>
-                 </fieldset>
-                 <input type="submit" value="Generate my style!">
-             </form>
-         </section>
-         <section class="results">
-             <h2></h2>
-         </section>
+                         <!-- <input type="radio" class="structure" id="inverted-triangle" name="structure" value="inverted-triangle">
+                         <label for="inverted-triangle">inverted triangle</label> -->
+                         <!-- <input type="checkbox">
+                         <p class="show-chart">Need help?</p>
+                         <article class="chart">
+                             <ul>
+                                <li class="exit-responsive"><i class="fas fa-times"></i></li>
+                                <li>Round: </li>
+                                <li>Oval: </li>
+                                <li>Heart:</li>
+                                <li>Square:</li>
+                                <li>Oblong:</li>
+                                <li>Triangle:</li>
+                                <li>Inverted Triangle:</li>
+                             </ul>
+                         </article> -->
+                         <button class="next">Next</button>
+                        </fieldset>
+    
+                     <fieldset class="thickness set-2">
+                         <h3>Hair Density</h3>
+                         <p>Your hair is:</p>
+                         <ul>
+                             <li>
+                                 <input type="radio" class="thickness" id="fine" name="thickness" value="-5">
+                                 <label for="fine">fine/thin</label>
+                             </li>
+                             <li>
+                                 <input type="radio" class="thickness" id="medium" name="thickness" value="0">
+                                 <label for="medium">medium</label>
+                             </li>
+                             <li>
+                                 <input type="radio" class="thickness" id="coarse" name="thickness" value="0">
+                                 <label for="coarse">coarse/thick</label>
+                             </li>
+                         </ul>
+                        <button class="next">Next</button>
+                     </fieldset>
+    
+                     <fieldset class="texture set-3">
+                         <h3>Hair Texture</h3>
+                         <p>What is the coil pattern of your hair in its natural state?</p>
+                         <ul>
+                             <li>
+                                 <input type="radio" class="texture" id="str-wav" name="texture" value="0">
+                                 <label for="str-wav">straight/wavy</label>
+                             </li>
+                             <li>
+                                 <input type="radio" class="texture" id="curly" name="texture" value="2">
+                                 <label for="curly">curly</label>
+                             </li>
+                             <li>
+                                 <input type="radio" class="texture" id="x-curly" name="texture" value="2">
+                                 <label for="x-curly">extra tight & curly</label>
+                             </li>
+                         </ul>
+                        <button class="next">Next</button>
+                     </fieldset>
+                     <fieldset class="forehead set-4">
+                         <h3>Fringe/Bangs</h3>
+                         <p>How big is your forehead? Measure with your fingers</p>
+                         <ul>
+                             <li>
+                                 <input type="radio" class="forehead" id="three" name="forehead" value="-5">
+                                 <label for="three">'three' head</label>
+                             </li>
+                             <li>
+                                 <input type="radio" class="forehead" id="four" name="forehead" value="0">
+                                 <label for="four">'four' head</label>
+                             </li>
+                             <li>
+                                 <input type="radio" class="forehead" id="five" name="forehead" value="4">
+                                 <label for="five">'five' head</label>
+                             </li>
+                         </ul>
+                        <button class="next">Next</button>
+                     </fieldset>
+                     <fieldset class="maintenance set-5">
+                         <h3>Level of Hair Maintenance</h3>
+                         <p>Will you style with tools and products, or are you low maintenance?</p>
+                         <ul>
+                             <li>
+                                 <input type="radio" class="maintenance" id="style" name="maintenance" value="5">
+                                 <label for="style">style with tools/products</label>
+                             </li>
+                             <li>
+                                 <input type="radio" class="maintenance" id="low-main" name="maintenance" value="-5">
+                                 <label for="low-main">low maintenance</label>
+                             </li>
+                         </ul>
+                     </fieldset>
+                     <div class="sub-ref">
+                         <input type="submit" value="Generate my style!">
+                         <button class="refresh">Refresh</button>
+                     </div>
+                 </form>
+             </section>
+             <section class="results">
+                 <h2></h2>
+             </section>
+         </div>
      </main>
      <!-- MAIN ENDS -->
      <!-- FOOTER STARTS -->
