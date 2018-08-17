@@ -111,27 +111,32 @@ hairstyles = {
 
 let multipleResults = []
 
-const shapeChoice = $('input[name=structure]:checked').val();
-const thicknessChoice = $('input[name=thickness]:checked').val();
-const textureChoice = $('input[name=texture]:checked').val();
-const fringeChoice = $('input[name=forehead]:checked').val();
-const maintenanceChoice = $('input[name=maintenance]:checked').val();
+// const shapeChoice = $('input[name=structure]:checked').val();
+// const thicknessChoice = $('input[name=thickness]:checked').val();
+// const textureChoice = $('input[name=texture]:checked').val();
+// const fringeChoice = $('input[name=forehead]:checked').val();
+// const maintenanceChoice = $('input[name=maintenance]:checked').val();
 
+const randomResult = (array) => {
+   const randomIndex = array[Math.floor(Math.random() * array.length)]
+   // console.log(randomIndex);
+   return randomIndex;
+}
 
 // find out what the user chose
 $(function(){
    $('form').on('submit',function(e){
+      const shapeChoice = $('input[name=structure]:checked').val();
+      const thicknessChoice = $('input[name=thickness]:checked').val();
+      const textureChoice = $('input[name=texture]:checked').val();
+      const fringeChoice = $('input[name=forehead]:checked').val();
+      const maintenanceChoice = $('input[name=maintenance]:checked').val();
       // prevent button from re-directing
       e.preventDefault();
       // Find out what the user's answers are and add the values together
-      const userChoices = Number(shapeChoice) + Number(thicknessChoice) + Number(fringeChoice) + Number(maintenanceChoice) + Number(textureChoice);
+      let userChoices = Number(shapeChoice) + Number(thicknessChoice) + Number(fringeChoice) + Number(maintenanceChoice) + Number(textureChoice);
       console.log(userChoices);
       // randomize the results from the matched arrays
-      const randomResult = (array) => {
-         const randomIndex = array[Math.floor(Math.random() * array.length)]
-         // console.log(randomIndex);
-         return randomIndex;
-      }
 
       // const hi = Object.keys(hairstyles)
       // loop through the arrays and match the user's final value to a hairstyle
@@ -144,20 +149,21 @@ $(function(){
                // console.log(result);
                multipleResults.push(result);
                // console.log(multipleResults);
-         }
+            }
             randomResult(multipleResults);
             // console.log(multipleResults);
          });
          
       }
-      // const resultName = randomResult(multipleResults).slice(1,resultName.length);
       let resultName = randomResult(multipleResults).split('_').join(' ');
       resultName = resultName.slice(2, resultName.length);
       console.log(resultName);
-      // console.log(hi);
+      
       // console.log(hairstyles);
-   
-
+      // $('.results').append(`<h1>${resultName}</h1>`)
+      $('h2').text(resultName);
+      multipleResults = []
+      // document.getElementById('form').reset();
    });
 
 });
