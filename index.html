@@ -4,12 +4,12 @@
      <meta charset="UTF-8">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700,900|Source+Sans+Pro:400,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700,900|Source+Sans+Pro:200,400,900" rel="stylesheet">
      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
         crossorigin="anonymous">
      <link rel="stylesheet" href="styles/style.css">
-     <title>FREE HAIR CONSULTATION</title>
+     <title>One-Minute Hair Consultation</title>
  </head>
  <body>
      <!-- HEADER STARTS -->
@@ -30,47 +30,43 @@
                              <span class="question">What's your face shape?</span>
                          </div>
                          <ul>
-                             <li>
-                                 <input type="radio" class="structure" id="round" name="structure" value="20">
-                                 <label for="round">round</label>
-                             </li>
-                             <li>
-                                 <input type="radio" class="structure" id="oval" name="structure" value="40">
-                                 <label for="oval">oval</label>
-                             </li>
-                             <li>
-                                 <input type="radio" class="structure" id="heart" name="structure" value="60">
-                                 <label for="heart">heart</label>
-                             </li>
-                             <li>
-                                 <input type="radio" class="structure" id="square" name="structure" value="80">
-                                 <label for="square">square</label>
-                             </li>
-                             <li>
-                                 <input type="radio" class="structure" id="oblong" name="structure" value="100">
-                                 <label for="oblong">oblong</label>
-                             </li>
-                             <li>
-                                 <input type="radio" class="structure" id="triangle" name="structure" value="120">
-                                 <label for="triangle">triangle</label>
-                             </li>
+                            <label for="round">
+                                <li>
+                                    <input type="radio" class="structure" id="round" name="structure" value="20">
+                                    <p>round</p>
+                                </li>
+                            </label>
+                            <label for="oval">
+                                <li>
+                                    <input type="radio" class="structure" id="oval" name="structure" value="40">
+                                    <p>oval</p>
+                                </li>
+                            </label>
+                            <label for="heart">
+                                <li>
+                                    <input type="radio" class="structure" id="heart" name="structure" value="60">
+                                    <p>heart</p>
+                                </li>
+                            </label>
+                            <label for="square">     
+                                <li>
+                                    <input type="radio" class="structure" id="square" name="structure" value="80">
+                                    <p>square</p>
+                                </li>
+                            </label>
+                            <label for="oblong">
+                                <li>
+                                    <input type="radio" class="structure" id="oblong" name="structure" value="100">
+                                    <p>oblong</p>
+                                </li>
+                            </label>
+                            <label for="triangle">
+                                <li>
+                                    <input type="radio" class="structure" id="triangle" name="structure" value="120">
+                                    <p>triangle</p>
+                                </li>
+                            </label>
                          </ul>
-                         <!-- <input type="radio" class="structure" id="inverted-triangle" name="structure" value="inverted-triangle">
-                         <label for="inverted-triangle">inverted triangle</label> -->
-                         <!-- <input type="checkbox">
-                         <p class="show-chart">Need help?</p>
-                         <article class="chart">
-                             <ul>
-                                <li class="exit-responsive"><i class="fas fa-times"></i></li>
-                                <li>Round: </li>
-                                <li>Oval: </li>
-                                <li>Heart:</li>
-                                <li>Square:</li>
-                                <li>Oblong:</li>
-                                <li>Triangle:</li>
-                                <li>Inverted Triangle:</li>
-                             </ul>
-                         </article> -->
                              <button class="next"><i class="fas fa-long-arrow-alt-right"></i></button>
                         </fieldset>
     
@@ -78,18 +74,24 @@
                          <h3>Hair Density</h3>
                          <span class="question">Your hair is:</span>
                          <ul>
-                             <li>
-                                 <input type="radio" class="thickness" id="fine" name="thickness" value="-5">
-                                 <label for="fine">fine/thin</label>
-                             </li>
-                             <li>
-                                 <input type="radio" class="thickness" id="medium" name="thickness" value="0">
-                                 <label for="medium">medium</label>
-                             </li>
-                             <li>
-                                 <input type="radio" class="thickness" id="coarse" name="thickness" value="0">
-                                 <label for="coarse">coarse/thick</label>
-                             </li>
+                            <label for="fine">
+                                <li>
+                                    <input type="radio" class="thickness" id="fine" name="thickness" value="-5">
+                                    <p>fine/thin</p>
+                                </li>
+                            </label>
+                            <label for="medium">    
+                                <li>
+                                    <input type="radio" class="thickness" id="medium" name="thickness" value="0">
+                                    <p>medium</p>
+                                </li>
+                            </label>
+                            <label for="coarse">
+                                <li>
+                                     <input type="radio" class="thickness" id="coarse" name="thickness" value="0">
+                                     <p>coarse/thick</p>
+                                 </li>
+                            </label>
                          </ul>
                         <div class="buttons">
                             <button class="back">Back</button>
@@ -101,18 +103,24 @@
                          <h3>Hair Texture</h3>
                          <span class="question">What is the coil pattern of your hair in its natural state?</span>
                          <ul>
-                             <li>
-                                 <input type="radio" class="texture" id="str-wav" name="texture" value="0">
-                                 <label for="str-wav">straight/wavy</label>
-                             </li>
-                             <li>
-                                 <input type="radio" class="texture" id="curly" name="texture" value="2">
-                                 <label for="curly">curly</label>
-                             </li>
-                             <li>
-                                 <input type="radio" class="texture" id="x-curly" name="texture" value="2">
-                                 <label for="x-curly">extra tight & curly</label>
-                             </li>
+                            <label for="str-wav">
+                                <li>
+                                     <input type="radio" class="texture" id="str-wav" name="texture" value="0">
+                                     <p>straight/wavy</p>
+                                 </li>                                
+                            </label>
+                            <label for="curly">
+                                <li>
+                                    <input type="radio" class="texture" id="curly" name="texture" value="2">
+                                    <p>curly</p>
+                                </li>                                
+                            </label>
+                            <label for="x-curly">
+                                <li>
+                                    <input type="radio" class="texture" id="x-curly" name="texture" value="2">
+                                    <p>extra tight & curly</p>
+                                </li>
+                            </label>
                          </ul>
                         <div class="buttons">
                             <button class="back">Back</button>
@@ -123,18 +131,24 @@
                          <h3>Fringe/Bangs</h3>
                          <span class="question">How big is your forehead? Measure with your fingers</span>
                          <ul>
-                             <li>
-                                 <input type="radio" class="forehead" id="three" name="forehead" value="-5">
-                                 <label for="three">'three' head</label>
-                             </li>
-                             <li>
-                                 <input type="radio" class="forehead" id="four" name="forehead" value="0">
-                                 <label for="four">'four' head</label>
-                             </li>
-                             <li>
-                                 <input type="radio" class="forehead" id="five" name="forehead" value="4">
-                                 <label for="five">'five' head</label>
-                             </li>
+                            <label for="three">
+                                <li>
+                                    <input type="radio" class="forehead" id="three" name="forehead" value="-5">
+                                    <p>'three' head</p>
+                                </li>
+                            </label>
+                            <label for="four">
+                                <li>
+                                    <input type="radio" class="forehead" id="four" name="forehead" value="0">
+                                    <p>'four' head</p>
+                                </li>
+                            </label>
+                            <label for="five">
+                                <li>
+                                    <input type="radio" class="forehead" id="five" name="forehead" value="4">
+                                    <p>'five' head</p>
+                                </li>
+                            </label>
                          </ul>
                         <div class="buttons">
                             <button class="back">Back</button>
@@ -145,14 +159,18 @@
                          <h3>Level of Hair Maintenance</h3>
                          <span class="question">Will you style with tools and products, or are you low maintenance?</span>
                          <ul>
-                             <li>
-                                 <input type="radio" class="maintenance" id="style" name="maintenance" value="5">
-                                 <label for="style">style with tools/products</label>
-                             </li>
-                             <li>
-                                 <input type="radio" class="maintenance" id="low-main" name="maintenance" value="-5">
-                                 <label for="low-main">low maintenance</label>
-                             </li>
+                                <label for="style">
+                                    <li>
+                                        <input type="radio" class="maintenance" id="style" name="maintenance" value="5">
+                                        <p>style with tools/products</p>
+                                    </li>
+                                </label>
+                            <label for="low-main">
+                                <li>
+                                    <input type="radio" class="maintenance" id="low-main" name="maintenance" value="-5">
+                                    <p>low maintenance</p>
+                                </li>
+                            </label>
                          </ul>
                             <button class="back">Back</button>
                      </fieldset>
