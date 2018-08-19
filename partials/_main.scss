@@ -1,11 +1,13 @@
 .wrapper {
-   // width: 100%;
-   margin:0;
+   width: 80%;
+   margin: 0 auto;
    text-align:center;
    display:grid;
-   grid-template-columns: 2fr 1fr;
+   grid: template columns 1fr;;
    grid-template-rows: 1fr 1fr;
 }
+
+
 
 label.selected {
    border-bottom:1.5px solid #9FB3DF;
@@ -45,29 +47,26 @@ fieldset {
    height:auto;
 }
 
-h3 {
-   // position:absolute;
-   font-size:3.5rem;
-   opacity:0.5;
-   text-transform: uppercase;
-   margin:0;
-   top:0;
-   left:0;
-   border:1px solid red;
-}
-
-form p {
-   border:1px solid green;
-   // margin:0;
+form {
+   span {
+      font-size:1.5rem;
+   }
 }
 
 aside {
+   // border:1px solid red;
+   background:url(../assets/hair-wide.png) no-repeat;
+   background-size:cover;
+   background-position: bottom;
    position: fixed;
    top:0;
+   bottom:0;
    right:0;
-   width:18vw;
+   left:0;
+   // width:90%;
    height:100vh;
    z-index:-1;
+   margin:0 auto;
    // overflow: hidden;
 }
 

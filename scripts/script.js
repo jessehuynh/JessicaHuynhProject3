@@ -120,10 +120,16 @@ const randomResult = (array) => {
 }
 
 // hide the fieldsets except for the first fieldset
-$('.set-2, .set-3, .set-4, .set-5').hide();
+// $('set-1').hide()
+$('.set-1, .set-2, .set-3, .set-4, .set-5').hide();
 // hide the current fieldset and show the next fieldset on the click of next
 let setCounter = 1;
 $(function(){
+   $('.start').on('click',function(){
+      $('header').addClass('fixed');
+      $('.set-1').show();
+      $(this).hide();
+   });
    // let backCounter = setCounter - 1;
    $('.next').on('click', function(){
       $(`.set-${setCounter}`).on('click', function(){
@@ -131,31 +137,7 @@ $(function(){
          setCounter++;
          $(`.set-${setCounter}`).show();
       })
-   // $('.back').on('click', function(){
-   //    $(`.set-${setCounter}`).on('click',function(){
-   //       $(`.set-${setCounter}`).hide()
-   //       setCounter--;
-   //       $(`.set-${setCounter}`).show();
-   //       // setCounter = 1;
-   //    })
-   // });
-   
-   });
-
-// $(function(){
-//    let backCounter = ;
-//    $('.back').on('click', function(){
-//       $(`.set-${backCounter}`).on('click', function(){
-//          $(`.set-${backCounter}`).hide()
-//          backCounter = backCounter - 1;
-//          $(`.set-${backCounter}`).show();
-//       })
-//    });
-// });   
-
-   
-   
-   
+   });   
    $('form').on('submit',function(e){
       // prevent button from re-directing
       e.preventDefault();
