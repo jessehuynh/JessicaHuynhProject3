@@ -12,7 +12,7 @@ body {
   color: #1d1d1d;
   height: 100vh;
   display: grid;
-  grid-template-rows: 1fr 7fr;
+  grid-template-rows: 1fr 6fr;
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 2.5rem; }
 
@@ -177,8 +177,8 @@ header {
     background: none;
     text-transform: uppercase;
     border: 1px solid black;
-    border-radius: 20px;
-    padding: 10px 15px;
+    border-radius: 30px;
+    padding: 10px 20px;
     margin: 15px 0; }
     header .start:hover {
       color: white;
@@ -231,7 +231,10 @@ fieldset {
       border-top: 1px dotted #6D6D6D;
       border-bottom: 1px dotted #6D6D6D;
       background: rgba(255, 255, 255, 0.3);
-      width: calc(100% / 2); }
+      width: calc(100% / 2);
+      -webkit-transition: all 0.3s ease-in-out;
+      -o-transition: all 0.3s ease-in-out;
+      transition: all 0.3s ease-in-out; }
   fieldset .ref-next, fieldset .sub-ref {
     margin-top: 20px;
     width: 100%;
@@ -288,7 +291,15 @@ input[type="submit"] {
   border-top: 1px solid #fff;
   border-bottom: 1px solid #fff;
   text-transform: uppercase;
-  color: #fff; }
+  color: #fff;
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out; }
+  input[type="submit"]:hover {
+    background: none;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    color: #000; }
 
 label.selected {
   border-bottom: 1px solid #fff;
@@ -352,6 +363,34 @@ aside {
 .gradient-hair {
   top: -10%;
   right: 7%; }
+
+footer {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
+  margin: 0; }
+  footer nav {
+    position: absolute;
+    bottom: 0;
+    right: 0; }
+  footer ul li {
+    list-style: none;
+    margin: 0;
+    padding: 0; }
+    footer ul li a {
+      font-size: 5rem;
+      margin: 0 5px;
+      color: #DB949C; }
+  footer article {
+    width: 350px;
+    font-size: 1.5rem;
+    line-height: 1.5;
+    background: pink;
+    padding: 10px 15px; }
 
 h1 {
   font-family: 'Playfair Display', serif;

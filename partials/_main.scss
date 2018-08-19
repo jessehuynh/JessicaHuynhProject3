@@ -39,6 +39,7 @@ fieldset {
          border-bottom:1px dotted $primary;
          background:$translight;
          width:calc(100% / 2);
+         transition:all 0.3s ease-in-out;
       }
    }
    .ref-next,.sub-ref {
@@ -103,8 +104,12 @@ input[type="submit"] {
    border-bottom:1px solid $soft;
    text-transform: uppercase;
    color:$soft;
+   transition:all 0.3s ease-in-out;
    &:hover {
-      // background:linear-gradient(to right, black, transparent);
+      background:none;
+      border-top:1px solid black;
+      border-bottom:1px solid black;
+      color:$dark;
       
    }
 }
@@ -140,9 +145,7 @@ fieldset {
 // SET-2 
 .set-2 label ,.set-3 label,.set-4 label {
    width:calc(100% / 3);
-   
 }
-
 
 .head-question {
    display:flex;
@@ -191,8 +194,4 @@ aside {
 .gradient-hair {
    top:-10%;
    right:7%;
-}
-
-.results {
-   // border:1px solid red;
 }
