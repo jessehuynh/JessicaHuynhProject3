@@ -1,6 +1,6 @@
 .wrapper {
-   width: 100%;
-   // margin:0 2%;
+   // width: 100%;
+   margin:0;
    text-align:center;
    display:grid;
    grid-template-columns: 2fr 1fr;
@@ -10,12 +10,13 @@
 label.selected {
    border-bottom:1.5px solid #9FB3DF;
 }
+
 fieldset {
-   display:flex;
-   align-items:center;
+   // display:flex;
+   // align-items:center;
    // display:grid;
-   flex-direction:column;
-   margin:2%;
+   // flex-direction:row;
+   // margin:2%;
    // border:1px solid red;
    position:relative;
    padding-top:50px;
@@ -38,14 +39,26 @@ fieldset {
    }
 }
 
+.head-question {
+   display:flex;
+   border:1px solid cyan;
+   height:auto;
+}
+
 h3 {
-   position:absolute;
+   // position:absolute;
    font-size:3.5rem;
    opacity:0.5;
    text-transform: uppercase;
    margin:0;
    top:0;
    left:0;
+   border:1px solid red;
+}
+
+form p {
+   border:1px solid green;
+   // margin:0;
 }
 
 aside {

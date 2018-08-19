@@ -1,9 +1,9 @@
 body {
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(25%, rgba(0, 0, 0, 0.8)), to(rgba(0, 0, 0, 0.5)));
-  background: -webkit-linear-gradient(rgba(0, 0, 0, 0.8) 25%, rgba(0, 0, 0, 0.5));
-  background: -o-linear-gradient(rgba(0, 0, 0, 0.8) 25%, rgba(0, 0, 0, 0.5));
-  background: linear-gradient(rgba(0, 0, 0, 0.8) 25%, rgba(0, 0, 0, 0.5));
-  color: white;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(25%, rgba(250, 250, 250, 0.8)), to(rgba(250, 250, 250, 0.5)));
+  background: -webkit-linear-gradient(rgba(250, 250, 250, 0.8) 25%, rgba(250, 250, 250, 0.5));
+  background: -o-linear-gradient(rgba(250, 250, 250, 0.8) 25%, rgba(250, 250, 250, 0.5));
+  background: linear-gradient(rgba(250, 250, 250, 0.8) 25%, rgba(250, 250, 250, 0.5));
+  color: #1d1d1d;
   height: 100vh;
   display: grid; }
 
@@ -142,7 +142,7 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
   box-sizing: border-box; }
 
 .wrapper {
-  width: 100%;
+  margin: 0;
   text-align: center;
   display: grid;
   grid-template-columns: 2fr 1fr;
@@ -152,17 +152,6 @@ label.selected {
   border-bottom: 1.5px solid #9FB3DF; }
 
 fieldset {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  margin: 2%;
   position: relative;
   padding-top: 50px; }
   fieldset ul {
@@ -180,14 +169,24 @@ fieldset {
       fieldset ul label:hover {
         border-bottom: 1.5px solid #9FB3DF; }
 
+.head-question {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border: 1px solid cyan;
+  height: auto; }
+
 h3 {
-  position: absolute;
   font-size: 3.5rem;
   opacity: 0.5;
   text-transform: uppercase;
   margin: 0;
   top: 0;
-  left: 0; }
+  left: 0;
+  border: 1px solid red; }
+
+form p {
+  border: 1px solid green; }
 
 aside {
   position: fixed;
@@ -202,7 +201,7 @@ aside {
   right: 7%; }
 
 h1 {
-  font-family: 'Monoton';
+  font-family: 'Playfair Display', serif;
+  font-weight: 900;
   font-size: 4.5rem;
-  width: 100%;
   margin: 0 10px; }
