@@ -18,28 +18,28 @@ hairstyles = {
       15, 20, 22, 12, 17, 15, 10, 7
    ],
    V_Long_and_Layered_With_Fringe: [
-      37, 32, 30, 40, 44, 49, 51, 41, 47, 46, 36
+      37, 32, 30, 40, 44, 49, 51, 41, 47, 46, 36, 45
    ],
    V_Long_and_Blunt_With_Fringe: [
-      37, 32, 30, 40, 44, 49, 51, 41, 47, 46, 27, 36
+      37, 32, 30, 40, 44, 49, 51, 41, 47, 46, 27, 36, 45
    ],
    V_Medium_and_Blunt_With_Fringe: [
-      37, 32, 30, 40, 44, 49, 51, 41, 47, 46, 36
+      37, 32, 30, 40, 44, 49, 51, 41, 47, 46, 36, 45
    ],
    V_Medium_and_Layered_With_Fringe: [
-      37, 32, 30, 40, 44, 49, 51, 41, 47, 46, 27, 36
+      37, 32, 30, 40, 44, 49, 51, 41, 47, 46, 27, 36, 45
    ],
    V_Long_and_Layered_Without_Fringe: [
-      35, 40, 42, 32, 37, 32, 30
+      35, 40, 42, 32, 37, 32, 30, 45
    ],
    V_Medium_and_Blunt_Without_Fringe: [
-      35, 40, 42, 32, 37, 32, 30, 27
+      35, 40, 42, 32, 37, 32, 30, 27, 45
    ],
    V_Medium_and_Layered_Without_Fringe: [
-      35, 40, 42, 32, 37, 32, 30
+      35, 40, 42, 32, 37, 32, 30, 45
    ],
    V_Short_and_Tapered_Without_Fringe: [
-      35, 40, 42, 32, 37, 32, 30
+      35, 40, 42, 32, 37, 32, 30, 45
    ],
    H_Medium_and_Blunt_With_Fringe: [
       55, 60, 62, 52, 50, 67, 64, 69, 71, 61, 59, 54, 56
@@ -122,15 +122,38 @@ const randomResult = (array) => {
 // hide the fieldsets except for the first fieldset
 $('.set-2, .set-3, .set-4, .set-5').hide();
 // hide the current fieldset and show the next fieldset on the click of next
+let setCounter = 1;
 $(function(){
-   let setCounter = 1;
-   $('button').on('click', function(){
+   // let backCounter = setCounter - 1;
+   $('.next').on('click', function(){
       $(`.set-${setCounter}`).on('click', function(){
          $(`.set-${setCounter}`).hide()
          setCounter++;
          $(`.set-${setCounter}`).show();
       })
+   // $('.back').on('click', function(){
+   //    $(`.set-${setCounter}`).on('click',function(){
+   //       $(`.set-${setCounter}`).hide()
+   //       setCounter--;
+   //       $(`.set-${setCounter}`).show();
+   //       // setCounter = 1;
+   //    })
+   // });
+   
    });
+
+// $(function(){
+//    let backCounter = ;
+//    $('.back').on('click', function(){
+//       $(`.set-${backCounter}`).on('click', function(){
+//          $(`.set-${backCounter}`).hide()
+//          backCounter = backCounter - 1;
+//          $(`.set-${backCounter}`).show();
+//       })
+//    });
+// });   
+
+   
    
    
    $('form').on('submit',function(e){

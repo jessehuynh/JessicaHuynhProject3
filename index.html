@@ -1,10 +1,13 @@
  <!DOCTYPE html>
  <html lang="en">
  <head>
-     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
      <meta charset="UTF-8">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Monoton" rel="stylesheet">
+     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
+        crossorigin="anonymous">
      <link rel="stylesheet" href="styles/style.css">
      <title>FREE HAIR CONSULTATION</title>
  </head>
@@ -65,7 +68,7 @@
                                 <li>Inverted Triangle:</li>
                              </ul>
                          </article> -->
-                         <button class="next">Next</button>
+                             <button class="next"><i class="fas fa-long-arrow-alt-right"></i></button>
                         </fieldset>
     
                      <fieldset class="thickness set-2">
@@ -85,7 +88,10 @@
                                  <label for="coarse">coarse/thick</label>
                              </li>
                          </ul>
-                        <button class="next">Next</button>
+                        <div class="buttons">
+                            <button class="back">Back</button>
+                            <button class="next"><i class="fas fa-long-arrow-alt-right"></i></button>
+                        </div>
                      </fieldset>
     
                      <fieldset class="texture set-3">
@@ -105,7 +111,10 @@
                                  <label for="x-curly">extra tight & curly</label>
                              </li>
                          </ul>
-                        <button class="next">Next</button>
+                        <div class="buttons">
+                            <button class="back">Back</button>
+                            <button class="next"><i class="fas fa-long-arrow-alt-right"></i></button>
+                        </div>
                      </fieldset>
                      <fieldset class="forehead set-4">
                          <h3>Fringe/Bangs</h3>
@@ -124,7 +133,10 @@
                                  <label for="five">'five' head</label>
                              </li>
                          </ul>
-                        <button class="next">Next</button>
+                        <div class="buttons">
+                            <button class="back">Back</button>
+                            <button class="next"><i class="fas fa-long-arrow-alt-right"></i></button>
+                        </div>
                      </fieldset>
                      <fieldset class="maintenance set-5">
                          <h3>Level of Hair Maintenance</h3>
@@ -139,6 +151,7 @@
                                  <label for="low-main">low maintenance</label>
                              </li>
                          </ul>
+                            <button class="back">Back</button>
                      </fieldset>
                      <div class="sub-ref">
                          <input type="submit" value="Generate my style!">
@@ -146,6 +159,99 @@
                      </div>
                  </form>
              </section>
+             <!-- ASIDE-BACKGROUND SECTION -->
+             <aside class="base-hair">
+                <svg id="hair" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 316.65 1023.63"><defs>
+                        <style>
+                            .cls-1 {
+                                opacity: 0.55;
+                            }
+                
+                            .cls-2 {
+                                fill: url(#linear-gradient);
+                            }
+                
+                            .cls-3 {
+                                fill: #fff;
+                            }
+                
+                            .cls-4 {
+                                fill: url(#linear-gradient-2);
+                            }
+                        </style>
+                        <linearGradient id="linear-gradient" x1="1104" y1="1051.56" x2="1104" y2="-40.56" gradientUnits="userSpaceOnUse">
+                            <stop offset="0" stop-color="#fff" />
+                            <stop offset="1" />
+                        </linearGradient>
+                        <linearGradient id="linear-gradient-2" x1="1075.01" y1="1051.65" x2="1075.01" y2="-40.48" gradientTransform="matrix(1.19, -0.11, 0.09, 1, -274.99, 115.18)"
+                            xlink:href="#linear-gradient" />
+                    </defs>
+                    <g class="cls-1">
+                        <path class="cls-2" d="M1085,299.08C1081.31,191.62,1136.52,93,1195.4.37H1091.55c-14.16,26.6-24.89,58.84-35.24,83.33-29.7,70.3-51.24,146.65-41.21,223.57,12,92.25,67.38,174.71,101.4,262.42,24.35,62.81,37.84,128.79,43.24,195.12,2.88,35.48,3.46,71.33-2.73,106.47-9.07,51.42-32.24,99.59-57.92,146.51,30.74-44.82,59.25-91.14,73.45-142.39,9.5-34.31,12.34-70,12.84-105.65.93-66.56-6.21-133.64-24.48-198.71C1135.39,480.12,1088.14,392.18,1085,299.08Z"
+                            transform="translate(-924.42 -0.37)" />
+                    </g>
+                    <g class="cls-1">
+                        <path class="cls-3" d="M1195.75,554.8c-34-83.08-89.41-161.17-101.41-248.54C1079.82,200.55,1130.57,97.53,1183,.37h-3.12c-54.83,100.95-110.9,208.45-95.73,318.89,12,87.37,67.38,165.46,101.41,248.54,24.36,59.46,37.85,121.92,43.24,184.72,2.89,33.6,3.47,67.53-2.73,100.8-11.25,60.43-44.23,116.12-76.78,170.68l10.17-13c32.54-54.56,65.53-110.25,76.78-170.68,6.19-33.27,5.62-67.2,2.73-100.8C1233.59,676.72,1220.1,614.26,1195.75,554.8Z"
+                            transform="translate(-924.42 -0.37)" />
+                    </g>
+                    <g class="cls-1">
+                        <path class="cls-3" d="M1050,282.71C1046.51,181.56,1095.24,88.27,1150.08.37h-3.51c-58,91.57-111.64,188.93-108,294.92,3.17,93.1,50.42,181,75.93,272C1132.74,632.32,1139.88,699.4,1139,766c-.51,35.61-3.34,71.34-12.84,105.65-12,43.29-34.2,83.06-59.33,121.38q-6,11.09-12.15,22.07c34.23-49.08,67.25-99.57,82.9-156,9.5-34.3,12.33-70,12.83-105.64.94-66.57-6.21-133.65-24.47-198.72C1100.38,463.75,1053.12,375.81,1050,282.71Z"
+                            transform="translate(-924.42 -0.37)" />
+                    </g>
+                    <g class="cls-1">
+                        <path class="cls-3" d="M1123.47,747.29c-5.4-66.33-18.89-132.31-43.24-195.12-34-87.74-89.41-170.23-101.41-262.52C965.88,190.18,1004.75,93,1050.48.37h-3.32c-48.59,96.7-92.08,198.61-78.5,303,12,92.29,67.38,174.78,101.4,262.53,24.36,62.8,37.85,128.78,43.24,195.11,2.89,35.48,3.47,71.33-2.72,106.47-9.07,51.42-32.24,99.59-57.93,146.51q7.17-10.44,14.13-21c24.08-44.62,45.36-90.47,54-139.23C1126.94,818.62,1126.36,782.77,1123.47,747.29Z"
+                            transform="translate(-924.42 -0.37)" />
+                    </g>
+                    <g class="cls-1">
+                        <path class="cls-4" d="M1129.24,563.84C1090.75,476,1026.59,393.39,1014.57,301c-13.47-103.55,40-204.64,99.95-300.63H997.26C982,28.84,971.79,63.28,961.32,89.49,932.1,162.67,913.15,241,931.93,316.56c22.51,90.61,95.85,166.88,144.2,250.65,34.62,60,56.55,124.27,68.86,189.76,6.58,35,10.44,70.69,6.16,106.35-6.27,52.17-29.66,102.61-56.15,152.07,32.71-47.9,62.64-97.06,75-149.62,8.3-35.18,8.52-71.07,6-106.59C1171.25,692.77,1156.79,626.72,1129.24,563.84Z"
+                            transform="translate(-924.42 -0.37)" />
+                    </g></svg>
+             </aside>
+             <!-- ASIDE BACKRGOUND SECTION 2 -->
+             <aside class="gradient-hair">
+                <svg id="hair2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 316.65 1023.63"><defs>
+                        <style>
+                            .cls-1 {
+                                opacity: 0.55;
+                            }
+                
+                            .cls-2 {
+                                fill: url(#linear-gradient);
+                            }
+                
+                            .cls-3 {
+                                fill: #fff;
+                            }
+                
+                            .cls-4 {
+                                fill: url(#linear-gradient-2);
+                            }
+                        </style>
+                        <linearGradient id="linear-gradient" x1="666" y1="1051.56" x2="666" y2="-40.56" gradientUnits="userSpaceOnUse">
+                            <stop offset="0" stop-color="#fff" />
+                            <stop offset="1" />
+                        </linearGradient>
+                        <linearGradient id="linear-gradient-2" x1="710.82" y1="1012.9" x2="710.82" y2="-79.22" gradientTransform="matrix(1.19, -0.11, 0.09, 1, -274.99, 115.18)"
+                            xlink:href="#linear-gradient" />
+                    </defs>
+                    <title>hair2</title>
+                    <g id="gradient-strand2" class="cls-1">
+                        <path class="cls-2" d="M647,299.08C643.31,191.62,698.52,93,757.4.37H653.55C639.39,27,628.66,59.21,618.31,83.7c-29.7,70.3-51.24,146.65-41.21,223.57,12,92.25,67.38,174.71,101.4,262.42,24.35,62.81,37.84,128.79,43.24,195.12,2.88,35.48,3.46,71.33-2.73,106.47-9.07,51.42-32.24,99.59-57.92,146.51,30.74-44.82,59.25-91.14,73.45-142.39,9.5-34.31,12.34-70,12.84-105.65.93-66.56-6.21-133.64-24.48-198.71C697.39,480.12,650.14,392.18,647,299.08Z"
+                            transform="translate(-486.42 -0.37)" />
+                    </g>
+                    <g id="single-strand3" class="cls-1">
+                        <path class="cls-3" d="M757.75,554.8c-34-83.08-89.41-161.17-101.41-248.54C641.82,200.55,692.57,97.53,745,.37H741.9C687.07,101.32,631,208.82,646.17,319.26c12,87.37,67.38,165.46,101.41,248.54,24.36,59.46,37.85,121.92,43.24,184.72,2.89,33.6,3.47,67.53-2.73,100.8-11.25,60.43-44.23,116.12-76.78,170.68l10.17-13C754,956.44,787,900.75,798.26,840.32c6.19-33.27,5.62-67.2,2.73-100.8C795.59,676.72,782.1,614.26,757.75,554.8Z"
+                            transform="translate(-486.42 -0.37)" />
+                    </g>
+                    <g id="single-strand2" class="cls-1">
+                        <path class="cls-3" d="M612,282.71C608.51,181.56,657.24,88.27,712.08.37h-3.51c-58,91.57-111.64,188.93-108,294.92,3.17,93.1,50.42,181,75.93,272C694.74,632.32,701.88,699.4,701,766c-.51,35.61-3.34,71.34-12.84,105.65-12,43.29-34.2,83.06-59.33,121.38q-6,11.09-12.15,22.07c34.23-49.08,67.25-99.57,82.9-156,9.5-34.3,12.33-70,12.83-105.64.94-66.57-6.21-133.65-24.47-198.72C662.38,463.75,615.12,375.81,612,282.71Z"
+                            transform="translate(-486.42 -0.37)" />
+                    </g>
+                    <g id="gradient-strand" class="cls-1">
+                        <path class="cls-4" d="M691.24,563.84C652.75,476,588.59,393.39,576.57,301,563.1,197.45,616.6,96.36,676.52.37H559.26C544,28.84,533.79,63.28,523.32,89.49,494.1,162.67,475.15,241,493.93,316.56c22.51,90.61,95.85,166.88,144.2,250.65,34.62,60,56.55,124.27,68.86,189.76,6.58,35,10.44,70.69,6.16,106.35-6.27,52.17-29.66,102.61-56.15,152.07,32.71-47.9,62.64-97.06,75-149.62,8.3-35.18,8.52-71.07,6-106.59C733.25,692.77,718.79,626.72,691.24,563.84Z"
+                            transform="translate(-486.42 -0.37)" />
+                    </g></svg>
+             </aside>
              <section class="results">
                  <h2></h2>
              </section>

@@ -1,3 +1,12 @@
+body {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(25%, rgba(0, 0, 0, 0.8)), to(rgba(0, 0, 0, 0.5)));
+  background: -webkit-linear-gradient(rgba(0, 0, 0, 0.8) 25%, rgba(0, 0, 0, 0.5));
+  background: -o-linear-gradient(rgba(0, 0, 0, 0.8) 25%, rgba(0, 0, 0, 0.5));
+  background: linear-gradient(rgba(0, 0, 0, 0.8) 25%, rgba(0, 0, 0, 0.5));
+  color: white;
+  height: 100vh;
+  display: grid; }
+
 article, aside, details, figcaption, figure, footer, header, hgroup, nav, section, summary {
   display: block; }
 
@@ -133,9 +142,11 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
   box-sizing: border-box; }
 
 .wrapper {
-  width: 60%;
-  margin: 0 2%;
-  text-align: center; }
+  width: 100%;
+  text-align: center;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 1fr 1fr; }
 
 label.selected {
   border-bottom: 1.5px solid #9FB3DF; }
@@ -144,14 +155,16 @@ fieldset {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  margin: 2%; }
+  margin: 2%;
+  position: relative;
+  padding-top: 50px; }
   fieldset ul {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -166,3 +179,30 @@ fieldset {
       border-radius: 5px; }
       fieldset ul label:hover {
         border-bottom: 1.5px solid #9FB3DF; }
+
+h3 {
+  position: absolute;
+  font-size: 3.5rem;
+  opacity: 0.5;
+  text-transform: uppercase;
+  margin: 0;
+  top: 0;
+  left: 0; }
+
+aside {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 18vw;
+  height: 100vh;
+  z-index: -1; }
+
+.gradient-hair {
+  top: -10%;
+  right: 7%; }
+
+h1 {
+  font-family: 'Monoton';
+  font-size: 4.5rem;
+  width: 100%;
+  margin: 0 10px; }

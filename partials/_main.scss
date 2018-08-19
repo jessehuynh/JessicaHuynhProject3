@@ -1,7 +1,10 @@
 .wrapper {
-   width: 60%;
-   margin:0 2%;
+   width: 100%;
+   // margin:0 2%;
    text-align:center;
+   display:grid;
+   grid-template-columns: 2fr 1fr;
+   grid-template-rows: 1fr 1fr;
 }
 
 label.selected {
@@ -9,10 +12,13 @@ label.selected {
 }
 fieldset {
    display:flex;
-   flex-direction:column;
-   // justify-content:center;
    align-items:center;
+   // display:grid;
+   flex-direction:column;
    margin:2%;
+   // border:1px solid red;
+   position:relative;
+   padding-top:50px;
    ul {
       display:flex;
       list-style:none;
@@ -30,4 +36,29 @@ fieldset {
          }
       }
    }
+}
+
+h3 {
+   position:absolute;
+   font-size:3.5rem;
+   opacity:0.5;
+   text-transform: uppercase;
+   margin:0;
+   top:0;
+   left:0;
+}
+
+aside {
+   position: fixed;
+   top:0;
+   right:0;
+   width:18vw;
+   height:100vh;
+   z-index:-1;
+   // overflow: hidden;
+}
+
+.gradient-hair {
+   top:-10%;
+   right:7%;
 }
