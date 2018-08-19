@@ -21,7 +21,7 @@
      <!-- MAIN STARTS -->
      <main>
          <div class="wrapper">
-
+            <!-- CONSULTATION QUESTIONNAIRE STARTS -->
              <section class="consultation">
                  <form action="" id="form">
                      <fieldset class="structure set-1">
@@ -66,13 +66,26 @@
                                     <p>triangle</p>
                                 </li>
                             </label>
+                            <div class="ref-next">
+                                <label class="rn-button">
+                                    <li>
+                                        <button class="refresh">Refresh</button>
+                                    </li>
+                                </label>
+                                <label class="rn-button">
+                                    <li>
+                                        <button class="next"><i class="fas fa-long-arrow-alt-right"></i></button>
+                                    </li>
+                                </label>
+                            </div>
                          </ul>
-                             <button class="next"><i class="fas fa-long-arrow-alt-right"></i></button>
                         </fieldset>
     
                      <fieldset class="thickness set-2">
-                         <h3>Hair Density</h3>
-                         <span class="question">Your hair is:</span>
+                        <div class="head-question">
+                            <h3>Hair Density</h3>
+                            <span class="question">How thick is your hair?</span>
+                        </div>
                          <ul>
                             <label for="fine">
                                 <li>
@@ -92,16 +105,25 @@
                                      <p>coarse/thick</p>
                                  </li>
                             </label>
-                         </ul>
-                        <div class="buttons">
-                            <button class="back">Back</button>
-                            <button class="next"><i class="fas fa-long-arrow-alt-right"></i></button>
+                        <div class="ref-next">
+                            <label class="rn-button">
+                                <li>
+                                    <button class="refresh">Refresh</button>
+                                </li>
+                            </label>
+                            <label class="rn-button">
+                                <li>
+                                    <button class="next"><i class="fas fa-long-arrow-alt-right"></i></button>
+                                </li>
+                            </label>
                         </div>
                      </fieldset>
     
                      <fieldset class="texture set-3">
-                         <h3>Hair Texture</h3>
-                         <span class="question">What is the coil pattern of your hair in its natural state?</span>
+                        <div class="head-question">
+                            <h3>Hair Texture</h3>
+                            <span class="question">What's your hair texture?</span>
+                        </div>
                          <ul>
                             <label for="str-wav">
                                 <li>
@@ -121,15 +143,29 @@
                                     <p>extra tight & curly</p>
                                 </li>
                             </label>
+                            <div class="ref-next">
+                                <label class="rn-button">
+                                    <li>
+                                        <button class="refresh">Refresh</button>
+                                    </li>
+                                </label>
+                                <label class="rn-button">
+                                    <li>
+                                        <button class="next"><i class="fas fa-long-arrow-alt-right"></i></button>
+                                    </li>
+                                </label>
+                            </div>
                          </ul>
-                        <div class="buttons">
+                        <!-- <div class="buttons">
                             <button class="back">Back</button>
                             <button class="next"><i class="fas fa-long-arrow-alt-right"></i></button>
-                        </div>
+                        </div> -->
                      </fieldset>
                      <fieldset class="forehead set-4">
-                         <h3>Fringe/Bangs</h3>
-                         <span class="question">How big is your forehead? Measure with your fingers</span>
+                        <div class="head-question">
+                            <h3>Fringe/Bangs</h3>
+                            <span class="question">How big is your forehead?</span>
+                        </div>                         
                          <ul>
                             <label for="three">
                                 <li>
@@ -149,15 +185,30 @@
                                     <p>'five' head</p>
                                 </li>
                             </label>
+                            <div class="ref-next">
+                                <label class="rn-button">
+                                    <li>
+                                        <button class="refresh">Refresh</button>
+                                    </li>
+                                </label>
+                                <label class="rn-button">
+                                    <li>
+                                        <button class="next"><i class="fas fa-long-arrow-alt-right"></i></button>
+                                    </li>
+                                </label>
+                            </div>
+                            
                          </ul>
-                        <div class="buttons">
+                        <!-- <div class="buttons">
                             <button class="back">Back</button>
                             <button class="next"><i class="fas fa-long-arrow-alt-right"></i></button>
-                        </div>
+                        </div> -->
                      </fieldset>
                      <fieldset class="maintenance set-5">
-                         <h3>Level of Hair Maintenance</h3>
-                         <span class="question">Will you style with tools and products, or are you low maintenance?</span>
+                         <div class="head-question">
+                             <h3>Hair Maintenance</h3>
+                             <span class="question">Will you style it?</span>
+                         </div>
                          <ul>
                                 <label for="style">
                                     <li>
@@ -171,21 +222,20 @@
                                     <p>low maintenance</p>
                                 </li>
                             </label>
+                            <div class="sub-ref">
+                                <input type="submit" value="Generate my style!">
+                            </div>
                          </ul>
-                            <button class="back">Back</button>
+                            <!-- <button class="back">Back</button> -->
                      </fieldset>
-                     <div class="sub-ref">
-                         <input type="submit" value="Generate my style!">
-                         <button class="refresh">Refresh</button>
-                     </div>
-                 </form>
-             </section>
-             <!-- ASIDE-BACKGROUND SECTION -->
-             <aside class="base-hair">
-             </aside>
-             <!-- ASIDE BACKRGOUND SECTION 2 -->
-             <section class="results">
-                 <h2></h2>
+                    </form>
+                </section>
+                <!-- ASIDE-BACKGROUND SECTION -->
+                <aside class="base-hair">
+                </aside>
+                <!-- ASIDE BACKRGOUND SECTION 2 -->
+                <section class="results">
+                    <h2></h2>
              </section>
          </div>
      </main>

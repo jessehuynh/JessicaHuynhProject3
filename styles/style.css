@@ -12,8 +12,9 @@ body {
   color: #1d1d1d;
   height: 100vh;
   display: grid;
+  grid-template-rows: 1fr 7fr;
   font-family: 'Source Sans Pro', sans-serif;
-  font-size: 1.6rem; }
+  font-size: 2.5rem; }
 
 article, aside, details, figcaption, figure, footer, header, hgroup, nav, section, summary {
   display: block; }
@@ -182,14 +183,17 @@ header {
     header .start:hover {
       color: white;
       background: rgba(219, 148, 156, 0.5);
-      border: 1px dotted #DB949C; }
+      border: 1px dotted #DB949C;
+      -webkit-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+      transform: scale(1.1); }
 
 header.fixed {
   height: 10vh; }
   header.fixed h1 {
-    font-size: 7.5rem;
-    color: #DB949C;
-    text-shadow: 1px 1px 1px black; }
+    font-size: 8.25rem;
+    text-shadow: 1px 1px 1px black;
+    color: #DB949C; }
 
 button {
   -webkit-transition: all 0.5s ease-in-out;
@@ -197,12 +201,12 @@ button {
   transition: all 0.5s ease-in-out; }
 
 .wrapper {
-  width: 84%;
+  width: 83%;
   margin: 0 auto;
-  text-align: center;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr 1fr 1fr; }
+  text-align: center; }
+
+main {
+  letter-spacing: 1px; }
 
 fieldset {
   width: 100%;
@@ -217,7 +221,8 @@ fieldset {
     -ms-flex-flow: row wrap;
     flex-flow: row wrap;
     list-style: none;
-    padding: 0; }
+    padding: 0;
+    width: 100%; }
     fieldset ul li {
       padding: 20px 50px; }
     fieldset ul input[type=radio] {
@@ -226,32 +231,86 @@ fieldset {
       border-top: 1px dotted #6D6D6D;
       border-bottom: 1px dotted #6D6D6D;
       background: rgba(255, 255, 255, 0.3);
-      width: 50%; }
-      fieldset ul label:hover {
-        background: rgba(0, 0, 0, 0.3);
-        color: white; }
-      fieldset ul label:active {
-        background: -webkit-gradient(linear, right top, left top, color-stop(10%, rgba(219, 148, 156, 0.3)), to(transparent));
-        background: -webkit-linear-gradient(right, rgba(219, 148, 156, 0.3) 10%, transparent);
-        background: -o-linear-gradient(right, rgba(219, 148, 156, 0.3) 10%, transparent);
-        background: linear-gradient(to left, rgba(219, 148, 156, 0.3) 10%, transparent); }
+      width: calc(100% / 2); }
+  fieldset .ref-next, fieldset .sub-ref {
+    margin-top: 20px;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    text-transform: uppercase; }
+    fieldset .ref-next label, fieldset .sub-ref label {
+      width: 50%;
+      background: #DB949C;
+      -webkit-transition: background 0.3s;
+      -o-transition: background 0.3s;
+      transition: background 0.3s;
+      transition: 0.08s ease-in;
+      -o-transition: 0.08s ease-in;
+      -ms-transition: 0.08s ease-in;
+      -moz-transition: 0.08s ease-in;
+      -webkit-transition: 0.08s ease-in;
+      overflow: hidden;
+      position: relative; }
+      fieldset .ref-next label:active, fieldset .sub-ref label:active {
+        background: black; }
+      fieldset .ref-next label::before, fieldset .sub-ref label::before {
+        content: "";
+        position: absolute;
+        background: #000;
+        bottom: 0;
+        left: 0;
+        right: 100%;
+        top: 0;
+        z-index: -1;
+        -webkit-transition: right 0.15s ease-in;
+        -o-transition: right 0.15s ease-in;
+        transition: right 0.15s ease-in; }
+      fieldset .ref-next label:hover:before, fieldset .sub-ref label:hover:before {
+        right: 0; }
+      fieldset .ref-next label:first-child, fieldset .sub-ref label:first-child {
+        border-right: 1px solid #fff; }
+    fieldset .ref-next .rn-button:hover, fieldset .sub-ref .rn-button:hover {
+      background: none;
+      border-top: 1px solid #000;
+      border-bottom: 1px solid #000; }
+    fieldset .ref-next .next, fieldset .ref-next .refresh, fieldset .sub-ref .next, fieldset .sub-ref .refresh {
+      color: #fff; }
+
+input[type="submit"] {
+  width: 100%;
+  border: none;
+  padding: 20px 50px;
+  background: rgba(0, 0, 0, 0.5);
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  text-transform: uppercase;
+  color: #fff; }
 
 label.selected {
-  border-bottom: 1px solid white;
-  border-top: 1px solid white;
-  color: white; }
+  border-bottom: 1px solid #fff;
+  border-top: 1px solid #fff;
+  color: #fff; }
 
-fieldset label:nth-child(odd).selected {
-  background: -webkit-gradient(linear, right top, left top, color-stop(10%, rgba(219, 148, 156, 0.3)), to(transparent));
-  background: -webkit-linear-gradient(right, rgba(219, 148, 156, 0.3) 10%, transparent);
-  background: -o-linear-gradient(right, rgba(219, 148, 156, 0.3) 10%, transparent);
-  background: linear-gradient(to left, rgba(219, 148, 156, 0.3) 10%, transparent); }
+.set-1 label:nth-child(odd), .set-5 label:nth-child(odd) {
+  border-right: 1px solid #000; }
 
-fieldset label:nth-child(even).selected {
-  background: -webkit-gradient(linear, left top, right top, color-stop(10%, rgba(219, 148, 156, 0.3)), to(transparent));
-  background: -webkit-linear-gradient(left, rgba(219, 148, 156, 0.3) 10%, transparent);
-  background: -o-linear-gradient(left, rgba(219, 148, 156, 0.3) 10%, transparent);
-  background: linear-gradient(to right, rgba(219, 148, 156, 0.3) 10%, transparent); }
+.set-2 label:nth-child(even), .set-3 label:nth-child(even), .set-4 label:nth-child(even) {
+  border-right: 1px solid #000;
+  border-left: 1px solid #000; }
+
+fieldset label:hover:not(.rn-button) {
+  background: rgba(0, 0, 0, 0.3);
+  color: #fff; }
+
+fieldset label.selected:not(.rn-button) {
+  background: black; }
+
+.set-2 label, .set-3 label, .set-4 label {
+  width: calc(100% / 3); }
 
 .head-question {
   display: -webkit-box;
@@ -267,10 +326,15 @@ fieldset label:nth-child(even).selected {
 
 form span {
   font-weight: 900;
-  text-shadow: 1px 1px white;
+  text-shadow: 1px 1px #fff;
   opacity: 0.7;
   text-transform: uppercase;
-  font-size: 4rem; }
+  font-size: 4rem;
+  text-align: right; }
+
+.next, .refresh {
+  background: none;
+  border: none; }
 
 aside {
   background: url(../assets/hair-wide.png) no-repeat;
@@ -292,11 +356,24 @@ aside {
 h1 {
   font-family: 'Playfair Display', serif;
   font-weight: 900;
-  font-size: 4.5rem;
-  margin: 0 10px; }
+  font-size: 5rem;
+  margin: 0 10px;
+  color: #000; }
+
+h2 {
+  background: #DB949C;
+  width: 100%;
+  font-size: 4rem;
+  font-weight: 200;
+  padding: 10px;
+  margin: 20px 0; }
 
 h3 {
   text-transform: lowercase;
   font-weight: 300;
   font-size: 5rem;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  -webkit-box-flex: 0;
+  -ms-flex: 0 1 50%;
+  flex: 0 1 50%;
+  text-align-last: left; }
