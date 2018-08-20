@@ -50,7 +50,7 @@ fieldset {
          align-items:center;
          justify-content: center;
          @include breakPoint(sixthBreak) {
-            padding:12px;
+         padding:12px;
          }
       }
       input[type=radio]{
@@ -119,6 +119,12 @@ fieldset {
    }
 }
 
+.set-1 label li {
+   @include breakPoint(sixthBreak) {
+      padding:8px;
+   }
+}
+
 .set-1 label:nth-child(odd), .set-5 label:nth-child(odd){
    border-right:1px solid $dark;
    @include breakPoint(sixthBreak){
@@ -135,8 +141,6 @@ fieldset {
    }
 }
 
-
-// SET-2 
 .set-2 label ,.set-3 label,.set-4 label {
    width:calc(100% / 3);
     @include breakPoint(sixthBreak){

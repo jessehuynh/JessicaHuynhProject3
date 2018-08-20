@@ -350,6 +350,10 @@ fieldset label:hover:not(.rn-button) {
 fieldset label.selected:not(.rn-button) {
   background: black; }
 
+@media (max-width: 600px) {
+  .set-1 label li {
+    padding: 8px; } }
+
 .set-1 label:nth-child(odd), .set-5 label:nth-child(odd) {
   border-right: 1px solid #000; }
   @media (max-width: 600px) {
@@ -482,6 +486,9 @@ h1 {
     h1 {
       text-align: center;
       font-size: 5rem; } }
+  @media (max-width: 600px) {
+    h1 {
+      font-size: 4rem; } }
 
 h2 {
   background: #97AAD1;
