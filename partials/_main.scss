@@ -121,7 +121,7 @@ fieldset {
 
 .set-1 label li {
    @include breakPoint(sixthBreak) {
-      padding:5px;
+      padding:10px;
    }
 }
 
@@ -178,4 +178,8 @@ input[type="submit"] {
       border-bottom:1px solid black;
       color:$dark;
    }
+}
+
+.results {
+   background:orange;
 }

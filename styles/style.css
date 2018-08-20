@@ -353,7 +353,7 @@ fieldset label.selected:not(.rn-button) {
 
 @media (max-width: 600px) {
   .set-1 label li {
-    padding: 5px; } }
+    padding: 10px; } }
 
 .set-1 label:nth-child(odd), .set-5 label:nth-child(odd) {
   border-right: 1px solid #000; }
@@ -416,6 +416,9 @@ input[type="submit"] {
     border-top: 1px solid black;
     border-bottom: 1px solid black;
     color: #000; }
+
+.results {
+  background: orange; }
 
 footer {
   position: fixed;
