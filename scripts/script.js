@@ -120,7 +120,7 @@ const randomResult = (array) => {
 }
 
 // hide the fieldsets except for the first fieldset
-$('.set-1, .set-2, .set-3, .set-4, .set-5, h2, .footernote, .sup').hide();
+$('.set-1, .set-2, .set-3, .set-4, .set-5, h2, .footernote, .sup, .media').hide();
 // $('h2').hide();
 
 // hide the current fieldset and show the next fieldset on the click of next
@@ -128,7 +128,7 @@ let setCounter = 1;
 $(function(){
    $('.start').on('click',function(){
       $('header').addClass('fixed');
-      $('.set-1, .footernote').show('slow');
+      $('.set-1, .footernote, .media').show('slow');
       $(this).hide();
    });
 

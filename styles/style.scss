@@ -9,8 +9,9 @@ html {
 }
 
 body {
-   // background:linear-gradient(rgba(0,0,0,0.8)25%, rgba(0,0,0,0.5));
-   background:linear-gradient(rgba(250,250,250,0.8)25%, rgba(250,250,250,0.5));
+   background:url(../assets/hairbrownbg.png) no-repeat;
+   background-size:cover;
+   background-position:center;
    color:#1d1d1d;
    height:100vh;
    display:grid;
@@ -21,7 +22,6 @@ body {
       font-size:1.8rem;
    }
    @include breakPoint(sixthBreak) {
-      grid-template-rows:1fr 9fr;
       font-size:1.6rem;
    }
 }
@@ -31,12 +31,11 @@ body {
 @import "../partials/_footer.scss";
 
 h1 {
+   // border:1px solid red;
    font-family: 'Playfair Display', serif;
    font-weight:900;
    font-size:5.5rem;
-   // width:100%;
    margin:0 10px;
-   // border:1px solid red;
    color:$dark;
    text-shadow: 1px 1px 1px $soft;
    transition:all 1s;
@@ -60,11 +59,10 @@ h2 {
 }
 
 h3 {
-   text-transform: lowercase;
+   // border:1px solid red;
    font-weight:300;
    font-size:5rem;
    text-transform: uppercase;
-   // border:1px solid red;
    flex: 0 1 50%;
    text-align-last: left;
    @include breakPoint(firstBreak) {
@@ -76,4 +74,8 @@ h3 {
    @include breakPoint(sixthBreak) {
       font-size:2rem;
    }  
+}
+
+button {
+   transition:all 0.5s ease-in-out;
 }

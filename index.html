@@ -24,6 +24,8 @@
             <!-- CONSULTATION QUESTIONNAIRE STARTS -->
              <section class="consultation">
                  <form action="" id="form">
+
+                     <!-- FIRST QUESTION -->
                      <fieldset class="structure set-1">
                          <div class="head-question">
                              <h3>Facial Structure</h3>
@@ -74,14 +76,15 @@
                                 </label>
                                 <label class="rn-button">
                                     <li>
-                                        <button class="next"><i class="fas fa-long-arrow-alt-right"></i></button>
+                                        <button class="next">Next</button>
                                     </li>
                                 </label>
                             </div>
                          </ul>
-                        </fieldset>
-    
-                     <fieldset class="thickness set-2">
+                    </fieldset>
+
+                    <!-- SECOND QUESTION -->
+                    <fieldset class="thickness set-2">
                         <div class="head-question">
                             <h3>Hair Density</h3>
                             <span class="question">How thick is your hair?</span>
@@ -113,13 +116,14 @@
                             </label>
                             <label class="rn-button">
                                 <li>
-                                    <button class="next"><i class="fas fa-long-arrow-alt-right"></i></button>
+                                    <button class="next">Next</button>
                                 </li>
                             </label>
                         </div>
                      </fieldset>
-    
-                     <fieldset class="texture set-3">
+
+                    <!-- THIRD QUESTION -->
+                    <fieldset class="texture set-3">
                         <div class="head-question">
                             <h3>Hair Texture</h3>
                             <span class="question">What's your hair texture?</span>
@@ -151,17 +155,15 @@
                                 </label>
                                 <label class="rn-button">
                                     <li>
-                                        <button class="next"><i class="fas fa-long-arrow-alt-right"></i></button>
+                                        <button class="next">Next</button>
                                     </li>
                                 </label>
                             </div>
                          </ul>
-                        <!-- <div class="buttons">
-                            <button class="back">Back</button>
-                            <button class="next"><i class="fas fa-long-arrow-alt-right"></i></button>
-                        </div> -->
-                     </fieldset>
-                     <fieldset class="forehead set-4">
+                    </fieldset>
+
+                    <!-- FOURTH QUESTION -->
+                    <fieldset class="forehead set-4">
                         <div class="head-question">
                             <h3>Fringe/Bangs</h3>
                             <span class="question">How big is your forehead?</span>
@@ -193,29 +195,27 @@
                                 </label>
                                 <label class="rn-button">
                                     <li>
-                                        <button class="next"><i class="fas fa-long-arrow-alt-right"></i></button>
+                                        <button class="next">Next</button>
                                     </li>
                                 </label>
                             </div>
                             
                          </ul>
-                        <!-- <div class="buttons">
-                            <button class="back">Back</button>
-                            <button class="next"><i class="fas fa-long-arrow-alt-right"></i></button>
-                        </div> -->
-                     </fieldset>
-                     <fieldset class="maintenance set-5">
-                         <div class="head-question">
+                    </fieldset>
+
+                    <!-- FIFTH QUESTION -->
+                    <fieldset class="maintenance set-5">
+                        <div class="head-question">
                              <h3>Hair Maintenance</h3>
                              <span class="question">Will you style it?</span>
-                         </div>
-                         <ul>
-                                <label for="style">
-                                    <li>
-                                        <input type="radio" class="maintenance" id="style" name="maintenance" value="5">
-                                        <p>style with tools/products</p>
-                                    </li>
-                                </label>
+                        </div>
+                        <ul>
+                            <label for="style">
+                                <li>
+                                    <input type="radio" class="maintenance" id="style" name="maintenance" value="5">
+                                    <p>style with tools/products</p>
+                                </li>
+                            </label>
                             <label for="low-main">
                                 <li>
                                     <input type="radio" class="maintenance" id="low-main" name="maintenance" value="-5">
@@ -226,33 +226,37 @@
                                 <input type="submit" value="Generate my style!">
                             </div>
                          </ul>
-                            <!-- <button class="back">Back</button> -->
                      </fieldset>
                     </form>
                 </section>
-                <!-- ASIDE-BACKGROUND SECTION -->
-                <aside class="base-hair">
-                </aside>
-                <!-- ASIDE BACKRGOUND SECTION 2 -->
+                <!-- QUESTIONNAIRE ENDS -->
+
+                <!-- RESULT SECTION -->
                 <section class="results">
                     <h2></h2>
-             </section>
+                </section>
          </div>
      </main>
      <!-- MAIN ENDS -->
+
      <!-- FOOTER STARTS -->
      <footer>
+         <!-- STICKY NOTE -->
          <div class="footernote">
              <p>
                  Message from the creator of the <span>'One-Minute Hair Consultation'</span>
             </p>
          </div>
+
+         <!-- HIDDEN ARTICLE -->
          <article class="sup">
             <p>
                 These results are generalized based on your facial features,  hair density and texture, and maintenance, and are not length or gender specific. These results will not be completely accurate as there are other factors to be considered (including your own preference!). Your options do not have to be limited! See your stylist for a personalized and in-depth consultation. <span class="tap">(Tap to dismiss)</span>
             </p>
          </article>
-         <nav>
+
+         <!-- MEDIA NAV -->
+         <nav class="media">
              <ul>
                  <li>
                      <a href="#"><i class="fab fa-linkedin"></i></a>
@@ -266,11 +270,12 @@
                 </li>
              </ul>
          </nav>
-
      </footer>
      <!-- FOOTER ENDS -->
 
+     <!-- SCRIPTS -->
      <script src='https://code.jquery.com/jquery-3.2.1.min.js' integrity='sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4='crossorigin='anonymous'></script>
      <script src="scripts/script.js"></script>
+     <!-- SCRIPTS END -->
  </body>
  </html>

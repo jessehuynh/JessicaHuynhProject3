@@ -152,10 +152,9 @@ html {
   margin: 0; }
 
 body {
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(25%, rgba(250, 250, 250, 0.8)), to(rgba(250, 250, 250, 0.5)));
-  background: -webkit-linear-gradient(rgba(250, 250, 250, 0.8) 25%, rgba(250, 250, 250, 0.5));
-  background: -o-linear-gradient(rgba(250, 250, 250, 0.8) 25%, rgba(250, 250, 250, 0.5));
-  background: linear-gradient(rgba(250, 250, 250, 0.8) 25%, rgba(250, 250, 250, 0.5));
+  background: url(../assets/hairbrownbg.png) no-repeat;
+  background-size: cover;
+  background-position: center;
   color: #1d1d1d;
   height: 100vh;
   display: grid;
@@ -167,7 +166,6 @@ body {
       font-size: 1.8rem; } }
   @media (max-width: 600px) {
     body {
-      grid-template-rows: 1fr 9fr;
       font-size: 1.6rem; } }
 
 header {
@@ -235,11 +233,6 @@ header.fixed {
       header.fixed h1 {
         font-size: 2rem; } }
 
-button {
-  -webkit-transition: all 0.5s ease-in-out;
-  -o-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out; }
-
 .wrapper {
   width: 83%;
   margin: 0 auto;
@@ -247,6 +240,28 @@ button {
 
 main {
   letter-spacing: 1px; }
+
+form span {
+  font-weight: 900;
+  text-shadow: 1px 1px #000;
+  opacity: 0.8;
+  text-transform: uppercase;
+  font-size: 4rem;
+  color: #fff;
+  text-align: right;
+  -webkit-box-flex: 1;
+  -ms-flex: 1 0 50%;
+  flex: 1 0 50%; }
+  @media (max-width: 1240px) {
+    form span {
+      font-size: 3.5rem; } }
+  @media (max-width: 1090px) {
+    form span {
+      font-size: 3rem; } }
+  @media (max-width: 600px) {
+    form span {
+      text-align: center;
+      font-size: 2rem; } }
 
 fieldset {
   width: 100%;
@@ -274,7 +289,7 @@ fieldset {
       justify-content: center; }
       @media (max-width: 600px) {
         fieldset ul li {
-          padding: 5px; } }
+          padding: 10px; } }
     fieldset ul input[type=radio] {
       display: none; }
     fieldset ul label {
@@ -297,6 +312,10 @@ fieldset {
       @media (max-width: 600px) {
         fieldset ul label {
           width: 100%; } }
+  fieldset label.selected {
+    border-bottom: 1px solid #fff;
+    border-top: 1px solid #fff;
+    color: #fff; }
   fieldset .ref-next, fieldset .sub-ref {
     width: 100%;
     display: -webkit-box;
@@ -309,10 +328,10 @@ fieldset {
     fieldset .ref-next label, fieldset .sub-ref label {
       width: 50%;
       background: #97AAD1; }
-      fieldset .ref-next label:active, fieldset .sub-ref label:active {
-        background: black; }
       fieldset .ref-next label:first-child, fieldset .sub-ref label:first-child {
         border-right: 1px solid #fff; }
+      fieldset .ref-next label:active, fieldset .sub-ref label:active {
+        background: black; }
     fieldset .ref-next .rn-button:hover, fieldset .sub-ref .rn-button:hover {
       background: none;
       border-top: 1px solid #000;
@@ -321,29 +340,15 @@ fieldset {
       color: #fff;
       background: none;
       border: none; }
+      fieldset .ref-next .next:hover, fieldset .ref-next .refresh:hover, fieldset .sub-ref .next:hover, fieldset .sub-ref .refresh:hover {
+        color: #000; }
 
-input[type="submit"] {
-  width: 100%;
-  border: none;
-  padding: 20px 50px;
-  background: rgba(0, 0, 0, 0.5);
-  border-top: 1px solid #fff;
-  border-bottom: 1px solid #fff;
-  text-transform: uppercase;
-  color: #fff;
-  -webkit-transition: all 0.3s ease-in-out;
-  -o-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out; }
-  input[type="submit"]:hover {
-    background: none;
-    border-top: 1px solid black;
-    border-bottom: 1px solid black;
-    color: #000; }
-
-label.selected {
-  border-bottom: 1px solid #fff;
-  border-top: 1px solid #fff;
+fieldset label:hover:not(.rn-button) {
+  background: rgba(0, 0, 0, 0.3);
   color: #fff; }
+
+fieldset label.selected:not(.rn-button) {
+  background: black; }
 
 .set-1 label:nth-child(odd), .set-5 label:nth-child(odd) {
   border-right: 1px solid #000; }
@@ -358,13 +363,6 @@ label.selected {
     .set-2 label:nth-child(even), .set-3 label:nth-child(even), .set-4 label:nth-child(even) {
       border-right: none;
       border-left: none; } }
-
-fieldset label:hover:not(.rn-button) {
-  background: rgba(0, 0, 0, 0.3);
-  color: #fff; }
-
-fieldset label.selected:not(.rn-button) {
-  background: black; }
 
 .set-2 label, .set-3 label, .set-4 label {
   width: calc(100% / 3); }
@@ -396,44 +394,23 @@ fieldset label.selected:not(.rn-button) {
       flex-direction: column;
       width: 100%; } }
 
-form span {
-  font-weight: 900;
-  text-shadow: 1px 1px #000;
-  opacity: 0.8;
+input[type="submit"] {
+  width: 100%;
+  border: none;
+  padding: 20px 50px;
+  background: rgba(0, 0, 0, 0.5);
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;
   text-transform: uppercase;
-  font-size: 4rem;
   color: #fff;
-  text-align: right;
-  -webkit-box-flex: 1;
-  -ms-flex: 1 0 50%;
-  flex: 1 0 50%; }
-  @media (max-width: 1240px) {
-    form span {
-      font-size: 3.5rem; } }
-  @media (max-width: 1090px) {
-    form span {
-      font-size: 3rem; } }
-  @media (max-width: 600px) {
-    form span {
-      text-align: center;
-      font-size: 2rem; } }
-
-aside {
-  background: url(../assets/hairbrownbg.png) no-repeat;
-  background-size: cover;
-  background-position: center -50px;
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  height: 100vh;
-  margin: 0 auto;
-  z-index: -1; }
-
-.gradient-hair {
-  top: -10%;
-  right: 7%; }
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out; }
+  input[type="submit"]:hover {
+    background: none;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    color: #000; }
 
 footer {
   position: fixed;
@@ -447,8 +424,7 @@ footer {
   footer nav {
     position: absolute;
     bottom: 0;
-    right: 0;
-    z-index: 1; }
+    right: 0; }
   footer ul li {
     list-style: none;
     margin: 0;
@@ -456,13 +432,14 @@ footer {
     font-size: 5rem; }
     @media (max-width: 600px) {
       footer ul li {
-        display: inline-block;
-        font-size: 3rem; } }
+        display: inline-block; } }
     footer ul li a {
       margin: 0 5px;
       color: #97AAD1; }
+      footer ul li a:hover {
+        color: #BBD2FF; }
   footer article {
-    width: 400px;
+    width: 60%;
     font-size: 1.5rem;
     line-height: 1.5;
     background: #BBD2FF;
@@ -518,7 +495,6 @@ h2 {
       font-size: 3rem; } }
 
 h3 {
-  text-transform: lowercase;
   font-weight: 300;
   font-size: 5rem;
   text-transform: uppercase;
@@ -535,3 +511,8 @@ h3 {
   @media (max-width: 600px) {
     h3 {
       font-size: 2rem; } }
+
+button {
+  -webkit-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out; }
