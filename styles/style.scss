@@ -17,8 +17,8 @@ body {
    grid-template-rows:1fr 6fr;
    font-family: 'Source Sans Pro', sans-serif;
    font-size:2.5rem;
-   @include breakPoint(fourthBreak) {
-         // background:black;
+   @include breakPoint(fifthBreak) {
+         font-size:1.8rem;
       }
 }
 
@@ -36,7 +36,12 @@ h1 {
    color:$dark;
    text-shadow: 1px 1px 1px $soft;
    transition:all 1s;
+   @include breakPoint(fourthBreak) {
+      text-align: center;
+      font-size:5rem;
+   }
 }
+
 
 h2 {
    background:$accent;
@@ -61,4 +66,7 @@ h3 {
    @include breakPoint(thirdBreak) {
          font-size:4rem;
       }
+   @include breakPoint(sixthBreak) {
+      font-size:3rem;
+   }  
 }

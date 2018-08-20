@@ -26,6 +26,12 @@ header {
 
 header.fixed {
    height:10vh;
+   @include breakPoint(fifthBreak) {
+      height:20vh;
+   }
+   @include breakPoint(sixthBreak) {
+      height:15vh;
+   }
    h1 {
       font-size:8.25rem;
       text-shadow:1px 1px 1px darken($primary, 50%);
@@ -36,8 +42,12 @@ header.fixed {
       @include breakPoint(thirdBreak) {
          font-size: 6rem;
       }
-      @include breakPoint(thirdBreak) {
-         // font-size:5.8rem;
+      @include breakPoint(fourthBreak) {
+         font-size:5rem;
+      }
+      @include breakPoint(fifthBreak) {
+         font-size:4rem;
+
       }
    }
 }

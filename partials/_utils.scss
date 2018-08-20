@@ -21,9 +21,14 @@ $transdark: rgba(0,0,0,0.5);
     @if $point == fourthBreak {
        @media (max-width:900px) { @content;}
     }
-   //  @if $point == fifthBreak {
-   //     @media (max-width:900px) { @content;}
-   //  }
+    @if $point == fifthBreak {
+       @media (max-width:750px) { @content;}
+    }
+      @if $point == sixthBreak {
+       @media (max-width:600px) { @content;}
+    }
+    
+    
 
 
 }

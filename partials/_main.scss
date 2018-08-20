@@ -30,6 +30,8 @@ fieldset {
          // border:1px solid purple;
          // width:50%;
          padding:20px 50px;
+         align-items:center;
+         justify-content: center;
       }
       input[type=radio]{
          display:none;
@@ -40,6 +42,12 @@ fieldset {
          background:$translight;
          width:calc(100% / 2);
          transition:all 0.3s ease-in-out;
+         display:flex;
+         align-items:center;
+         justify-content: center;
+         @include breakPoint(sixthBreak){
+            width:100%;
+         }
       }
    }
    .ref-next,.sub-ref {
@@ -122,11 +130,18 @@ label.selected {
 
 .set-1 label:nth-child(odd), .set-5 label:nth-child(odd){
    border-right:1px solid $dark;
+   @include breakPoint(sixthBreak){
+      border-right:none;
+   }
 }
 
 .set-2 label:nth-child(even), .set-3 label:nth-child(even), .set-4 label:nth-child(even) {
    border-right:1px solid $dark;
    border-left:1px solid $dark;
+    @include breakPoint(sixthBreak){
+      border-right:none;
+      border-left:none;
+   }
 }
 
 // SET-1
@@ -138,25 +153,28 @@ fieldset {
    }
    label.selected:not(.rn-button) {
       background:black;
-      // background:yellow;
    }
 }
 
 // SET-2 
 .set-2 label ,.set-3 label,.set-4 label {
    width:calc(100% / 3);
+    @include breakPoint(sixthBreak){
+      width:100%;
+   }
 }
 
 .head-question {
-   display:flex;
    // border:1px solid cyan;
-   height:auto;
+   display:flex;
+   flex-flow:row wrap;
    align-items:center;
    justify-content: space-between;
    background:$accent;
    padding:0 5px;
-   @include breakPoint(thirdBreak) {
-         background:rgba(255,255,255,0.7);
+   @include breakPoint(fourthBreak) {
+         flex-direction:column;
+         width:100%;
       }
 }
 
@@ -177,8 +195,8 @@ form {
       @include breakPoint(thirdBreak) {
          font-size:3rem;
       }
-      @include breakPoint(thirdBreak) {
-         font-size:2.5rem;
+      @include breakPoint(sixthBreak) {
+         text-align: center;
       }
       
    }
@@ -201,11 +219,9 @@ aside {
    bottom:0;
    right:0;
    left:0;
-   // width:90%;
    height:100vh;
-   z-index:-1;
    margin:0 auto;
-   // overflow: hidden;
+   z-index:-1;
    @include breakPoint(fourthBreak) {
       // background:url(../assets/hairbrownbg.png);
    }
