@@ -30,7 +30,7 @@ header.fixed {
       height:20vh;
    }
    @include breakPoint(sixthBreak) {
-      height:15vh;
+      height:10vh;
    }
    h1 {
       font-size:8.25rem;
@@ -47,7 +47,12 @@ header.fixed {
       }
       @include breakPoint(fifthBreak) {
          font-size:4rem;
-
+      }
+      @include breakPoint(sixthBreak){
+         font-size:3rem;
+      }
+      @include breakPoint(seventhBreak) {
+         font-size:2rem;
       }
    }
 }

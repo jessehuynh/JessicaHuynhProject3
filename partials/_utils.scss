@@ -27,6 +27,9 @@ $transdark: rgba(0,0,0,0.5);
       @if $point == sixthBreak {
        @media (max-width:600px) { @content;}
     }
+      @if $point == seventhBreak {
+       @media (max-width:450px) { @content;}
+    }
     
     
 

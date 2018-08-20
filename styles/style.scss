@@ -18,8 +18,11 @@ body {
    font-family: 'Source Sans Pro', sans-serif;
    font-size:2.5rem;
    @include breakPoint(fifthBreak) {
-         font-size:1.8rem;
-      }
+      font-size:1.8rem;
+   }
+   @include breakPoint(sixthBreak) {
+      grid-template-rows:1fr 9fr;
+   }
 }
 
 @import "../partials/_header.scss";
@@ -50,6 +53,9 @@ h2 {
    font-size:4rem;
    font-weight:200;
    padding:10px;
+   @include breakPoint(seventhBreak) {
+      font-size:3rem;
+   }
 }
 
 h3 {

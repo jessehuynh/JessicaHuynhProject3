@@ -132,6 +132,19 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
 
+.visuallyhidden:not(:focus):not(:active) {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden; }
+
 html {
   font-size: 62.5%; }
 
@@ -152,6 +165,9 @@ body {
   @media (max-width: 750px) {
     body {
       font-size: 1.8rem; } }
+  @media (max-width: 600px) {
+    body {
+      grid-template-rows: 1fr 9fr; } }
 
 header {
   display: -webkit-box;
@@ -194,7 +210,7 @@ header.fixed {
       height: 20vh; } }
   @media (max-width: 600px) {
     header.fixed {
-      height: 15vh; } }
+      height: 10vh; } }
   header.fixed h1 {
     font-size: 8.25rem;
     text-shadow: 1px 1px 1px black;
@@ -211,6 +227,12 @@ header.fixed {
     @media (max-width: 750px) {
       header.fixed h1 {
         font-size: 4rem; } }
+    @media (max-width: 600px) {
+      header.fixed h1 {
+        font-size: 3rem; } }
+    @media (max-width: 450px) {
+      header.fixed h1 {
+        font-size: 2rem; } }
 
 button {
   -webkit-transition: all 0.5s ease-in-out;
@@ -410,7 +432,8 @@ form span {
       font-size: 3rem; } }
   @media (max-width: 600px) {
     form span {
-      text-align: center; } }
+      text-align: center;
+      font-size: 2.25rem; } }
 
 .next, .refresh {
   background: none;
@@ -450,12 +473,13 @@ footer {
   footer ul li {
     list-style: none;
     margin: 0;
-    padding: 0; }
+    padding: 0;
+    font-size: 5rem; }
     @media (max-width: 600px) {
       footer ul li {
-        display: inline-block; } }
+        display: inline-block;
+        font-size: 3rem; } }
     footer ul li a {
-      font-size: 5rem;
       margin: 0 5px;
       color: #97AAD1; }
   footer article {
@@ -510,6 +534,9 @@ h2 {
   font-size: 4rem;
   font-weight: 200;
   padding: 10px; }
+  @media (max-width: 450px) {
+    h2 {
+      font-size: 3rem; } }
 
 h3 {
   text-transform: lowercase;
