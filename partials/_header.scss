@@ -8,12 +8,8 @@ header {
    height:100vh;
    z-index: 1;
    transition:height 1s ease-in-out;
-   h1 {
-      // display:none;
-      transition:all 1s;
-   }
    .start {
-      background:none;
+      background:$translight;
       text-transform: uppercase;
       border:1px solid black;
       border-radius:30px;
@@ -21,7 +17,7 @@ header {
       margin:15px 0;
       &:hover {
          color:white;
-         background:rgba(219,148,156,0.5);
+         background:$accentlight;
          border:1px dotted $accent;
          transform:scale(1.1);
       }
@@ -33,7 +29,16 @@ header.fixed {
    h1 {
       font-size:8.25rem;
       text-shadow:1px 1px 1px darken($primary, 50%);
-      color:$accent;
+      color:$accentlight;
+      @include breakPoint(firstBreak) {
+         font-size:7.25rem;
+      }
+      @include breakPoint(thirdBreak) {
+         font-size: 6rem;
+      }
+      @include breakPoint(thirdBreak) {
+         // font-size:5.8rem;
+      }
    }
 }
 

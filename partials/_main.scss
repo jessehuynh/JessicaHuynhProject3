@@ -43,7 +43,7 @@ fieldset {
       }
    }
    .ref-next,.sub-ref {
-      margin-top:20px;
+      // margin-top:20px;
       width:100%;
       display:flex;
       justify-content: space-between;
@@ -153,17 +153,34 @@ fieldset {
    height:auto;
    align-items:center;
    justify-content: space-between;
+   background:$accent;
+   padding:0 5px;
+   @include breakPoint(thirdBreak) {
+         background:rgba(255,255,255,0.7);
+      }
 }
 
 form {
    span {
       font-weight:900;
-      text-shadow: 1px 1px $soft;
-      opacity:0.7;
+      text-shadow: 1px 1px $dark;
+      opacity:0.8;
       text-transform: uppercase;
       font-size:4rem;
+      color:$soft;
       // border:1px solid red;
       text-align: right;
+      flex:1 0 50%;
+      @include breakPoint(secondBreak) {
+         font-size:3.5rem;
+      }
+      @include breakPoint(thirdBreak) {
+         font-size:3rem;
+      }
+      @include breakPoint(thirdBreak) {
+         font-size:2.5rem;
+      }
+      
    }
 }
 
@@ -176,9 +193,9 @@ form {
 
 aside {
    // border:1px solid red;
-   background:url(../assets/hair-wide.png) no-repeat;
+   background:url(../assets/hairbrownbg.png) no-repeat;
    background-size:cover;
-   background-position: bottom;
+   background-position:center -50px;
    position: fixed;
    top:0;
    bottom:0;
@@ -189,6 +206,9 @@ aside {
    z-index:-1;
    margin:0 auto;
    // overflow: hidden;
+   @include breakPoint(fourthBreak) {
+      // background:url(../assets/hairbrownbg.png);
+   }
 }
 
 .gradient-hair {

@@ -120,8 +120,8 @@ const randomResult = (array) => {
 }
 
 // hide the fieldsets except for the first fieldset
-$('.set-1, .set-2, .set-3, .set-4, .set-5').hide();
-$('h2').hide();
+$('.set-1, .set-2, .set-3, .set-4, .set-5, h2, .sup').hide();
+// $('h2').hide();
 
 // hide the current fieldset and show the next fieldset on the click of next
 let setCounter = 1;
@@ -131,14 +131,17 @@ $(function(){
       $('.set-1').show('slow');
       $(this).hide();
    });
-   // let backCounter = setCounter - 1;
+
+   $('.footernote').on('click', function(){
+      $('.sup').show();
+   });
    $('.next').on('click', function(){
       $(`.set-${setCounter}`).on('click', function(){
          $(`.set-${setCounter}`).hide('slow')
          setCounter++;
          $(`.set-${setCounter}`).show('slow');
       })
-   });   
+   });
    $('form').on('submit',function(e){
       // prevent button from re-directing
       e.preventDefault();
@@ -194,7 +197,7 @@ $(function(){
    $('label').on('click', function(){
       $('label').removeClass('selected');
       $(this).toggleClass('selected')
-   })
+   });
 
 });
 

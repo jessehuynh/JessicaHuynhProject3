@@ -1,0 +1,29 @@
+$primary: #6D6D6D;
+$accent: #97AAD1;
+// $accent:#E2ACB7;
+$accentlight:#BBD2FF;
+$soft: #fff;
+$dark: #000;
+$translight: rgba(255,255,255,0.3);
+
+$transdark: rgba(0,0,0,0.5);
+
+@mixin breakPoint($point) {
+    @if $point == firstBreak {
+        @media (max-width:1300px) { @content;}
+    }
+    @if $point == secondBreak {
+       @media (max-width:1240px) { @content;}
+    }
+    @if $point == thirdBreak {
+       @media (max-width:1090px) { @content;}
+    }
+    @if $point == fourthBreak {
+       @media (max-width:900px) { @content;}
+    }
+   //  @if $point == fifthBreak {
+   //     @media (max-width:900px) { @content;}
+   //  }
+
+
+}

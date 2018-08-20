@@ -1,3 +1,6 @@
+@import "../partials/_setup.scss";
+@import "../partials/_utils.scss";
+
 html {
    font-size:62.5%;
 }
@@ -14,12 +17,11 @@ body {
    grid-template-rows:1fr 6fr;
    font-family: 'Source Sans Pro', sans-serif;
    font-size:2.5rem;
+   @include breakPoint(fourthBreak) {
+         // background:black;
+      }
 }
 
-
-@import "../partials/_setup.scss";
-@import "../partials/_typography.scss";
-@import "../partials/_utils.scss";
 @import "../partials/_header.scss";
 @import "../partials/_main.scss";
 @import "../partials/_footer.scss";
@@ -27,20 +29,22 @@ body {
 h1 {
    font-family: 'Playfair Display', serif;
    font-weight:900;
-   font-size:5rem;
+   font-size:5.5rem;
    // width:100%;
    margin:0 10px;
    // border:1px solid red;
    color:$dark;
+   text-shadow: 1px 1px 1px $soft;
+   transition:all 1s;
 }
 
 h2 {
-   background:$accent ;
+   background:$accent;
+   color:$soft;
    width:100%;
    font-size:4rem;
    font-weight:200;
    padding:10px;
-   margin:20px 0;
 }
 
 h3 {
@@ -51,4 +55,10 @@ h3 {
    // border:1px solid red;
    flex: 0 1 50%;
    text-align-last: left;
+   @include breakPoint(firstBreak) {
+      font-size:4.5rem;
+   }
+   @include breakPoint(thirdBreak) {
+         font-size:4rem;
+      }
 }
