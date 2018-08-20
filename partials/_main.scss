@@ -30,7 +30,7 @@ fieldset {
          align-items:center;
          justify-content: center;
          @include breakPoint(sixthBreak) {
-            padding:15px;
+            padding:10px;
          }
       }
       input[type=radio]{
