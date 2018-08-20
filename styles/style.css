@@ -337,7 +337,8 @@ fieldset {
     fieldset .ref-next .next, fieldset .ref-next .refresh, fieldset .sub-ref .next, fieldset .sub-ref .refresh {
       color: #fff;
       background: none;
-      border: none; }
+      border: none;
+      width: 50%; }
       fieldset .ref-next .next:hover, fieldset .ref-next .refresh:hover, fieldset .sub-ref .next:hover, fieldset .sub-ref .refresh:hover {
         color: #000; }
 
@@ -397,12 +398,12 @@ fieldset label.selected:not(.rn-button) {
       width: 100%; } }
 
 input[type="submit"] {
-  width: 100%;
+  width: 50%;
   border: none;
   padding: 20px 50px;
-  background: rgba(0, 0, 0, 0.5);
-  border-top: 1px solid #fff;
-  border-bottom: 1px solid #fff;
+  background: #97AAD1;
+  border-top: 1px dotted #6D6D6D;
+  border-bottom: 1px dotted #6D6D6D;
   text-transform: uppercase;
   color: #fff;
   -webkit-transition: all 0.3s ease-in-out;
@@ -413,9 +414,6 @@ input[type="submit"] {
     border-top: 1px solid black;
     border-bottom: 1px solid black;
     color: #000; }
-
-.results {
-  background: orange; }
 
 footer {
   position: fixed;
@@ -507,7 +505,7 @@ h1 {
       font-size: 4rem; } }
 
 h2 {
-  background: #97AAD1;
+  background: rgba(0, 0, 0, 0.5);
   color: #fff;
   width: 100%;
   font-size: 4rem;
