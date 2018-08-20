@@ -274,7 +274,7 @@ fieldset {
       justify-content: center; }
       @media (max-width: 600px) {
         fieldset ul li {
-          padding: 10px; } }
+          padding: 5px; } }
     fieldset ul input[type=radio] {
       display: none; }
     fieldset ul label {
@@ -308,33 +308,9 @@ fieldset {
     text-transform: uppercase; }
     fieldset .ref-next label, fieldset .sub-ref label {
       width: 50%;
-      background: #97AAD1;
-      -webkit-transition: background 0.3s;
-      -o-transition: background 0.3s;
-      transition: background 0.3s;
-      transition: 0.08s ease-in;
-      -o-transition: 0.08s ease-in;
-      -ms-transition: 0.08s ease-in;
-      -moz-transition: 0.08s ease-in;
-      -webkit-transition: 0.08s ease-in;
-      overflow: hidden;
-      position: relative; }
+      background: #97AAD1; }
       fieldset .ref-next label:active, fieldset .sub-ref label:active {
         background: black; }
-      fieldset .ref-next label::before, fieldset .sub-ref label::before {
-        content: "";
-        position: absolute;
-        background: #000;
-        bottom: 0;
-        left: 0;
-        right: 100%;
-        top: 0;
-        z-index: -1;
-        -webkit-transition: right 0.15s ease-in;
-        -o-transition: right 0.15s ease-in;
-        transition: right 0.15s ease-in; }
-      fieldset .ref-next label:hover:before, fieldset .sub-ref label:hover:before {
-        right: 0; }
       fieldset .ref-next label:first-child, fieldset .sub-ref label:first-child {
         border-right: 1px solid #fff; }
     fieldset .ref-next .rn-button:hover, fieldset .sub-ref .rn-button:hover {
@@ -342,7 +318,9 @@ fieldset {
       border-top: 1px solid #000;
       border-bottom: 1px solid #000; }
     fieldset .ref-next .next, fieldset .ref-next .refresh, fieldset .sub-ref .next, fieldset .sub-ref .refresh {
-      color: #fff; }
+      color: #fff;
+      background: none;
+      border: none; }
 
 input[type="submit"] {
   width: 100%;
@@ -439,10 +417,6 @@ form span {
     form span {
       text-align: center;
       font-size: 2rem; } }
-
-.next, .refresh {
-  background: none;
-  border: none; }
 
 aside {
   background: url(../assets/hairbrownbg.png) no-repeat;
