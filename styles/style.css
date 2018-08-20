@@ -288,9 +288,6 @@ fieldset {
       -webkit-box-pack: center;
       -ms-flex-pack: center;
       justify-content: center; }
-      @media (max-width: 600px) {
-        fieldset ul li {
-          padding: 12px; } }
     fieldset ul input[type=radio] {
       display: none; }
     fieldset ul label {
@@ -353,7 +350,7 @@ fieldset label.selected:not(.rn-button) {
 
 @media (max-width: 600px) {
   .set-1 label li {
-    padding: 10px; } }
+    padding: 15px; } }
 
 .set-1 label:nth-child(odd), .set-5 label:nth-child(odd) {
   border-right: 1px solid #000; }
@@ -443,11 +440,11 @@ footer {
         display: inline-block; } }
     footer ul li a {
       margin: 0 5px;
-      color: #97AAD1; }
+      color: #000; }
       footer ul li a:hover {
         color: #BBD2FF; }
   footer article {
-    width: 60%;
+    width: 50%;
     font-size: 1.5rem;
     line-height: 1.5;
     background: #BBD2FF;
