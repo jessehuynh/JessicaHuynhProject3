@@ -438,7 +438,7 @@ form span {
   @media (max-width: 600px) {
     form span {
       text-align: center;
-      font-size: 2.25rem; } }
+      font-size: 2rem; } }
 
 .next, .refresh {
   background: none;
@@ -560,4 +560,4 @@ h3 {
       font-size: 4rem; } }
   @media (max-width: 600px) {
     h3 {
-      font-size: 3rem; } }
+      font-size: 2rem; } }
