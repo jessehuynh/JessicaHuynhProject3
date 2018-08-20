@@ -23,6 +23,7 @@ body {
    }
    @include breakPoint(sixthBreak) {
       font-size:1.6rem;
+      grid-template-rows:0.5fr 6fr;
    }
 }
 

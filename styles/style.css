@@ -166,7 +166,8 @@ body {
       font-size: 1.8rem; } }
   @media (max-width: 600px) {
     body {
-      font-size: 1.6rem; } }
+      font-size: 1.6rem;
+      grid-template-rows: 0.5fr 6fr; } }
 
 header {
   display: -webkit-box;
@@ -352,7 +353,7 @@ fieldset label.selected:not(.rn-button) {
 
 @media (max-width: 600px) {
   .set-1 label li {
-    padding: 8px; } }
+    padding: 5px; } }
 
 .set-1 label:nth-child(odd), .set-5 label:nth-child(odd) {
   border-right: 1px solid #000; }
