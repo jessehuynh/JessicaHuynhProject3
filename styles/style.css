@@ -1,3 +1,4 @@
+@charset "UTF-8";
 article, aside, details, figcaption, figure, footer, header, hgroup, nav, section, summary {
   display: block; }
 
@@ -546,6 +547,7 @@ h3 {
     h3 {
       font-size: 2rem; } }
 
+√
 button {
   -webkit-transition: all 0.5s ease-in-out;
   -o-transition: all 0.5s ease-in-out;
