@@ -317,11 +317,24 @@ fieldset {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: row wrap;
+    flex-flow: row wrap;
     text-align: left;
     text-transform: uppercase; }
+    @media (max-width: 600px) {
+      fieldset .ref-next, fieldset .sub-ref {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+        flex-direction: column-reverse; } }
     fieldset .ref-next label, fieldset .sub-ref label {
       width: 50%;
       background: #BBD2FF; }
+      @media (max-width: 600px) {
+        fieldset .ref-next label, fieldset .sub-ref label {
+          width: 100%; } }
       fieldset .ref-next label:first-child, fieldset .sub-ref label:first-child {
         border-right: 1px solid #fff; }
       fieldset .ref-next label:active, fieldset .sub-ref label:active {
@@ -347,7 +360,7 @@ fieldset label.selected:not(.rn-button) {
 
 @media (max-width: 600px) {
   .set-1 label li {
-    padding: 12px; } }
+    padding: 10px; } }
 
 .set-1 label:nth-child(odd), .set-5 label:nth-child(odd) {
   border-right: 1px solid #000; }

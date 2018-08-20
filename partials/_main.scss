@@ -77,11 +77,18 @@ label.selected {
 .ref-next,.sub-ref {
    width:100%;
    display:flex;
+   flex-flow:row wrap;
    text-align: left;
    text-transform: uppercase;
+   @include breakPoint(sixth-break) {
+	   flex-direction:column-reverse;
+   }
    label {
       width:50%;
-      background:$accentlight;
+	  background:$accentlight;
+	  @include breakPoint(sixth-break) {
+		  width:100%;
+	  }
       &:first-child {
             border-right:1px solid $soft;
          }
@@ -118,7 +125,7 @@ fieldset {
 
 .set-1 label li {
    @include breakPoint(sixth-break) {
-      padding:12px;
+      padding:10px;
    }
 }
 
