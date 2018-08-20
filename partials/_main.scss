@@ -1,5 +1,6 @@
 .wrapper {
    width: 83%;
+   // max-width:2000px;
    margin:0 auto;
    text-align:center;
 }
@@ -19,13 +20,13 @@ form {
       color:$soft;
       text-align: right;
       flex:1 0 50%;
-      @include breakPoint(secondBreak) {
+      @include breakPoint(second-break) {
          font-size:3.5rem;
       }
-      @include breakPoint(thirdBreak) {
+      @include breakPoint(third-break) {
          font-size:3rem;
       }
-      @include breakPoint(sixthBreak) {
+      @include breakPoint(sixth-break) {
          text-align: center;
          font-size:2rem;
       }
@@ -65,7 +66,7 @@ fieldset {
          display:flex;
          align-items:center;
          justify-content: center;
-         @include breakPoint(sixthBreak){
+         @include breakPoint(sixth-break){
             width:100%;
          }
       }
@@ -120,14 +121,14 @@ fieldset {
 }
 
 .set-1 label li {
-   @include breakPoint(sixthBreak) {
+   @include breakPoint(sixth-break) {
       padding:12px;
    }
 }
 
 .set-1 label:nth-child(odd), .set-5 label:nth-child(odd){
    border-right:1px solid $dark;
-   @include breakPoint(sixthBreak){
+   @include breakPoint(sixth-break){
       border-right:none;
    }
 }
@@ -135,7 +136,7 @@ fieldset {
 .set-2 label:nth-child(even), .set-3 label:nth-child(even), .set-4 label:nth-child(even) {
    border-right:1px solid $dark;
    border-left:1px solid $dark;
-    @include breakPoint(sixthBreak){
+    @include breakPoint(sixth-break){
       border-right:none;
       border-left:none;
    }
@@ -143,7 +144,7 @@ fieldset {
 
 .set-2 label ,.set-3 label,.set-4 label {
    width:calc(100% / 3);
-    @include breakPoint(sixthBreak){
+    @include breakPoint(sixth-break){
       width:100%;
    }
 }
@@ -156,7 +157,7 @@ fieldset {
    justify-content: space-between;
    background:$accent;
    padding:0 5px;
-   @include breakPoint(fourthBreak) {
+   @include breakPoint(fourth-break) {
          flex-direction:column;
          width:100%;
       }

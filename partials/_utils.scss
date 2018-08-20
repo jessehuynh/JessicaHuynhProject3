@@ -9,29 +9,30 @@ $translight: rgba(255,255,255,0.3);
 $transdark: rgba(0,0,0,0.5);
 
 @mixin breakPoint($point) {
-    @if $point == firstBreak {
+    @if $point == first-break {
         @media (max-width:1300px) { @content;}
     }
-    @if $point == secondBreak {
+    @if $point == second-break {
        @media (max-width:1240px) { @content;}
     }
-    @if $point == thirdBreak {
+    @if $point == third-break {
        @media (max-width:1090px) { @content;}
     }
-    @if $point == fourthBreak {
+    @if $point == fourth-break {
        @media (max-width:900px) { @content;}
     }
-    @if $point == fifthBreak {
+    @if $point == fifth-break {
        @media (max-width:750px) { @content;}
     }
-      @if $point == sixthBreak {
+      @if $point == sixth-break {
        @media (max-width:600px) { @content;}
     }
-      @if $point == seventhBreak {
+      @if $point == seventh-break {
        @media (max-width:450px) { @content;}
     }
-    
-    
+    @if $point == bigting {
+        @media (max-width:1999px) { @content;}
+    }
 
 
 }

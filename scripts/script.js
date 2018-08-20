@@ -112,16 +112,15 @@ hairstyles = {
 // create array to hold the hairstyles index that match the user's value
 let multipleResults = []
 
-// produce a random result
+// function that randomizes result from the matched results from new array
 const randomResult = (array) => {
    const randomIndex = array[Math.floor(Math.random() * array.length)]
    // console.log(randomIndex);
    return randomIndex;
 }
 
-// hide the fieldsets except for the first fieldset
+// hide on load
 $('.set-1, .set-2, .set-3, .set-4, .set-5, h2, .footernote, .sup, .media').hide();
-// $('h2').hide();
 
 // hide the current fieldset and show the next fieldset on the click of next
 let setCounter = 1;
@@ -133,7 +132,7 @@ $(function(){
    });
 
    $('.footernote').on('click', function(){
-      $(this).hide('slow')
+      $(this).hide('fast')
       $('.sup').show('slow');
    });
    $('.sup').on('click', function(){
@@ -159,7 +158,7 @@ $(function(){
       // Take the user's answers and add the values together
       let userChoices = Number(shapeChoice) + Number(thicknessChoice) + Number(fringeChoice) + Number(maintenanceChoice) + Number(textureChoice);
 
-      console.log(userChoices);
+      // console.log(userChoices);
 
       // randomize the results from the matched arrays
 
@@ -169,6 +168,7 @@ $(function(){
          // console.log(hairstyles[result]);
          hairstyles[result].forEach((resItem)=>{
             // console.log(resItem);
+            // if the result item matches the user's answer value, put it into the new array to be randomized
             if(resItem === userChoices) {
                // console.log(result);
                multipleResults.push(result);
@@ -177,24 +177,21 @@ $(function(){
             randomResult(multipleResults);
             // console.log(multipleResults);
          });
-         
       }
       // make the name of the array presentable by removing first letter and exchange underscores for spaces
       let resultName = randomResult(multipleResults).split('_').join(' ');
       resultName = resultName.slice(2, resultName.length);
-      console.log(resultName);
+      // console.log(resultName);
 
       // console.log(hairstyles);
       
       // put the result onto the page
-      // $('.results').append(`<h1>${resultName}</h1>`)
       $('h2').show("slow").text(resultName);
       // reset the array at the end
       multipleResults = []
-      // reset the form -- not the page
+      // v this resets the form -- not the page v
       // document.getElementById('form').reset();
    });
-   // when you hit refresh, refresh the page
    $('.refresh').on('click',function(){
       document.location='';
    });

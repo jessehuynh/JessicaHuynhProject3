@@ -17,7 +17,9 @@ footer {
       margin:0;
       padding:0;
       font-size:5rem;
-      @include breakPoint(sixthBreak){
+      display:flex;
+      justify-content: center;
+      @include breakPoint(sixth-break){
          display:inline-block;
          // font-size:3rem;
       }
@@ -39,7 +41,7 @@ footer {
       bottom:0;
       left:0;
       z-index:2; 
-      @include breakPoint(sixthBreak) {
+      @include breakPoint(sixth-break) {
       width:100%;
       right:0;
       left:0;
@@ -47,6 +49,7 @@ footer {
       .tap {
          font-style:italic;
          font-size:1.3rem;
+         opacity:0.7;
       }
    }
 }
@@ -54,12 +57,19 @@ footer {
 .footernote {
    position: fixed;
    bottom:0;
-   background:$accent;
+   background:$accentlight;
    font-size:1.4rem;
    padding:10px;
-   width:175px;
+   width:150px;
    z-index:3;
    span {
       font-weight:600;
+   }
+   i {
+      font-size:2rem;
+      position:absolute;
+      top:2px;
+      right:2px;
+      transform:rotate(-45deg);
    }
 }

@@ -18,13 +18,14 @@ body {
    grid-template-rows:1fr 6fr;
    font-family: 'Source Sans Pro', sans-serif;
    font-size:2.5rem;
-   @include breakPoint(fifthBreak) {
+   @include breakPoint(fifth-break) {
       font-size:1.8rem;
    }
-   @include breakPoint(sixthBreak) {
+   @include breakPoint(sixth-break) {
       font-size:1.6rem;
       grid-template-rows:0.5fr 6fr;
    }
+   @include breakPoint(bigting)
 }
 
 @import "../partials/_header.scss";
@@ -40,11 +41,11 @@ h1 {
    color:$dark;
    text-shadow: 1px 1px 1px $soft;
    transition:all 1s;
-   @include breakPoint(fourthBreak) {
+   @include breakPoint(fourth-break) {
       text-align: center;
       font-size:5rem;
    }
-   @include breakPoint(sixthBreak) {
+   @include breakPoint(sixth-break) {
       font-size:4rem;
    }
 }
@@ -57,7 +58,7 @@ h2 {
    font-size:4rem;
    font-weight:200;
    padding:10px;
-   @include breakPoint(seventhBreak) {
+   @include breakPoint(seventh-break) {
       font-size:3rem;
    }
 }
@@ -69,13 +70,13 @@ h3 {
    text-transform: uppercase;
    flex: 0 1 50%;
    text-align-last: left;
-   @include breakPoint(firstBreak) {
+   @include breakPoint(first-break) {
       font-size:4.5rem;
    }
-   @include breakPoint(thirdBreak) {
+   @include breakPoint(third-break) {
          font-size:4rem;
       }
-   @include breakPoint(sixthBreak) {
+   @include breakPoint(sixth-break) {
       font-size:2rem;
    }  
 }
