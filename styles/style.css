@@ -287,9 +287,6 @@ fieldset {
       -webkit-box-pack: center;
       -ms-flex-pack: center;
       justify-content: center; }
-      @media (max-width: 600px) {
-        fieldset ul li {
-          padding: 10px; } }
     fieldset ul input[type=radio] {
       display: none; }
     fieldset ul label {

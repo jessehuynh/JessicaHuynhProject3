@@ -49,9 +49,9 @@ fieldset {
          padding:20px;
          align-items:center;
          justify-content: center;
-         @include breakPoint(sixthBreak) {
-            padding:10px;
-         }
+         // @include breakPoint(sixthBreak) {
+         //    padding:15px;
+         // }
       }
       input[type=radio]{
          display:none;
