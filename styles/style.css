@@ -350,7 +350,7 @@ fieldset label.selected:not(.rn-button) {
 
 @media (max-width: 600px) {
   .set-1 label li {
-    padding: 15px; } }
+    padding: 12px; } }
 
 .set-1 label:nth-child(odd), .set-5 label:nth-child(odd) {
   border-right: 1px solid #000; }
