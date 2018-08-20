@@ -185,7 +185,7 @@ $(function(){
 
       // console.log(hairstyles);
       
-      // put the result onto the page
+      // // put the result onto the page
       $('h2').show("slow").text(resultName);
       // reset the array at the end
       multipleResults = []
@@ -200,6 +200,7 @@ $(function(){
       $('label').removeClass('selected');
       $(this).toggleClass('selected')
    });
+
 
 });
 
