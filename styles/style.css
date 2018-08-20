@@ -323,6 +323,9 @@ fieldset {
     flex-flow: row wrap;
     text-align: left;
     text-transform: uppercase; }
+    fieldset .ref-next li, fieldset .sub-ref li {
+      width: 100%;
+      text-align: center; }
     @media (max-width: 600px) {
       fieldset .ref-next, fieldset .sub-ref {
         -webkit-box-orient: vertical;
