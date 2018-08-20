@@ -2,10 +2,6 @@
    width: 83%;
    margin:0 auto;
    text-align:center;
-   // display:grid;
-   // grid-template-columns:1fr;
-   // grid-template-rows: 1fr 1fr;
-   // // border:1px solid green;
 }
 
 main {
@@ -19,6 +15,7 @@ fieldset {
    // flex-direction:row;
    border:none;
    padding:0;
+   margin:0 auto;
    ul {
       display:flex;
       flex-flow:row wrap;
@@ -29,9 +26,12 @@ fieldset {
       li {
          // border:1px solid purple;
          // width:50%;
-         padding:20px 50px;
+         padding:20px;
          align-items:center;
          justify-content: center;
+         @include breakPoint(sixthBreak) {
+            padding:15px;
+         }
       }
       input[type=radio]{
          display:none;

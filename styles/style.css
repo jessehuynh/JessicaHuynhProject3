@@ -167,7 +167,8 @@ body {
       font-size: 1.8rem; } }
   @media (max-width: 600px) {
     body {
-      grid-template-rows: 1fr 9fr; } }
+      grid-template-rows: 1fr 9fr;
+      font-size: 1.6rem; } }
 
 header {
   display: -webkit-box;
@@ -250,7 +251,8 @@ main {
 fieldset {
   width: 100%;
   border: none;
-  padding: 0; }
+  padding: 0;
+  margin: 0 auto; }
   fieldset ul {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -263,13 +265,16 @@ fieldset {
     padding: 0;
     width: 100%; }
     fieldset ul li {
-      padding: 20px 50px;
+      padding: 20px;
       -webkit-box-align: center;
       -ms-flex-align: center;
       align-items: center;
       -webkit-box-pack: center;
       -ms-flex-pack: center;
       justify-content: center; }
+      @media (max-width: 600px) {
+        fieldset ul li {
+          padding: 15px; } }
     fieldset ul input[type=radio] {
       display: none; }
     fieldset ul label {
