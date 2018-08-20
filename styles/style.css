@@ -198,7 +198,7 @@ header {
     header .start:hover {
       color: white;
       background: #BBD2FF;
-      border: 1px dotted #97AAD1;
+      border: 1px dotted #7C97C4;
       -webkit-transform: scale(1.1);
       -ms-transform: scale(1.1);
       transform: scale(1.1); }
@@ -311,21 +311,17 @@ fieldset {
         fieldset ul label {
           width: 100%; } }
   fieldset label.selected {
-    border-bottom: 1px solid #fff;
-    border-top: 1px solid #fff;
     color: #fff; }
   fieldset .ref-next, fieldset .sub-ref {
     width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
+    text-align: left;
     text-transform: uppercase; }
     fieldset .ref-next label, fieldset .sub-ref label {
       width: 50%;
-      background: #97AAD1; }
+      background: #BBD2FF; }
       fieldset .ref-next label:first-child, fieldset .sub-ref label:first-child {
         border-right: 1px solid #fff; }
       fieldset .ref-next label:active, fieldset .sub-ref label:active {
@@ -359,11 +355,11 @@ fieldset label.selected:not(.rn-button) {
     .set-1 label:nth-child(odd), .set-5 label:nth-child(odd) {
       border-right: none; } }
 
-.set-2 label:nth-child(even), .set-3 label:nth-child(even), .set-4 label:nth-child(even) {
+.set-2 label:nth-child(even):not(.rn-button), .set-3 label:nth-child(even):not(.rn-button), .set-4 label:nth-child(even):not(.rn-button) {
   border-right: 1px solid #000;
   border-left: 1px solid #000; }
   @media (max-width: 600px) {
-    .set-2 label:nth-child(even), .set-3 label:nth-child(even), .set-4 label:nth-child(even) {
+    .set-2 label:nth-child(even):not(.rn-button), .set-3 label:nth-child(even):not(.rn-button), .set-4 label:nth-child(even):not(.rn-button) {
       border-right: none;
       border-left: none; } }
 
@@ -387,7 +383,7 @@ fieldset label.selected:not(.rn-button) {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  background: #97AAD1;
+  background: #7C97C4;
   padding: 0 5px; }
   @media (max-width: 900px) {
     .head-question {
@@ -398,14 +394,15 @@ fieldset label.selected:not(.rn-button) {
       width: 100%; } }
 
 input[type="submit"] {
-  width: 50%;
+  width: 100%;
   border: none;
   padding: 20px 50px;
-  background: #97AAD1;
+  background: #BBD2FF;
   border-top: 1px dotted #6D6D6D;
   border-bottom: 1px dotted #6D6D6D;
   text-transform: uppercase;
   color: #fff;
+  text-shadow: 1px 1px 1px #6D6D6D;
   -webkit-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out; }
@@ -414,6 +411,9 @@ input[type="submit"] {
     border-top: 1px solid black;
     border-bottom: 1px solid black;
     color: #000; }
+
+.results {
+  width: 100%; }
 
 footer {
   position: fixed;
